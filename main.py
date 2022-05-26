@@ -31,7 +31,6 @@ app.add_middleware(
 
 @app.post("/metrics/")
 async def func_metrics(request: Request,metrics:patient_metrics, Origin:str | None=Header(default=None)):
-    print(request.body)
     print('Origin: ', Origin)
     print("your age is: ", metrics.age)
     print("your BMI is: ", metrics.BMI)
