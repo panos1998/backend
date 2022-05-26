@@ -1,5 +1,5 @@
 document.getElementById('iaft4').onclick = (event) => {
-	postData('https://biomedicalede.herokuapp.com/metrics', {
+	postData('https://biomedicalapp.herokuapp.com/metrics/', {
 	  age: document.getElementById("i3q7j").value,
 	  BMI: document.getElementById("i9agp").value,
 	  waist: document.getElementById("ijgfa").value,
