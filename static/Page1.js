@@ -8,7 +8,14 @@ document.getElementById('iaft4').onclick = (event) => {
 	}
 			)
 	  .then(data => {
-	  console.log(data);
+	  ids = ['paok']
+	  console.log(data)
+	  deleteElements(ids);
+	  const newDiv = document.createElement("div");
+	  const newContent = document.createTextNode(data['age']);
+	  newDiv.appendChild(newContent);
+	  var result = document.getElementById('result')
+	  result.appendChild(newDiv)
 	  // JSON data parsed by `data.json()` call
 	}
 		   );
@@ -34,5 +41,13 @@ document.getElementById('iaft4').onclick = (event) => {
 								);
 	return response.json();
 	// parses JSON response into native JavaScript objects
-  }
+  };
   
+  function deleteElements(ids){
+	  ids.forEach(elementId => {
+		  const element = document.getElementById(elementId);
+		  element.remove();
+		  
+	  });
+
+  };
