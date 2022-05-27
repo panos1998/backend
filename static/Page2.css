@@ -146,6 +146,8 @@ body{
   border-radius:19px !important;
   flex:0 12 6px !important;
   padding:0 0 0 0 !important;
+  justify-content:center !important;
+  text-align:center !important;
 }
 .classRule-iifpi-test-Page2{
   text-align:center !important;
@@ -155,6 +157,8 @@ body{
   font-family:Trebuchet MS, Helvetica, sans-serif !important;
   font-weight:500 !important;
   background-color:#c2d9da !important;
+  justify-content:center !important;
+  transform:rotateX(0) rotateY(0) rotateZ(0) scaleX(0.95) scaleY(1) scaleZ(1) !important;
 }
 .classRule-iyeb7-test-Page2{
   justify-content:center !important;
