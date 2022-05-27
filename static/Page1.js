@@ -1,7 +1,7 @@
 document.getElementById('Assess button').onclick = (event) => {
     data = {
       age: document.getElementsByName("Age")[0].value,
-      BMI: document.getElementsByName("BMI")[0].value,
+      BMI: document.getElementsByName("bmi")[0].value,
       waist: document.getElementsByName("Waist")[0].value,
       vegfruit: document.getElementsByName("vegfruit")[0].value,
       protein: document.getElementsByName("protein")[0].value}
