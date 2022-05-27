@@ -1,65 +1,321 @@
 .pointer:hover{
-    cursor:pointer;
+  cursor:pointer;
+}
+.align-self-center{
+  align-self:center !important;
+}
+.table-stripped2 tr:nth-child(even){
+  background-color:#f2f2f2 !important;
+}
+.table-stripped2 td:not(:last-child){
+  border-right:3px solid white !important;
+}
+.table-stripped2 th:not(:last-child){
+  border-right:3px solid white !important;
+}
+.sticky-footer{
+  position:fixed !important;
+  bottom:0 !important;
+  width:100% !important;
+}
+.form-check .form-check-input{
+  display:inline-block !important;
+  margin-top:0.25vw !important;
+}
+.dropdown-menu{
+  position:absolute !important;
+  transform:none !important;
+}
+.flex{
+  display:flex !important;
+}
+.w3-row-padding img{
+  margin-bottom:12px !important;
+}
+body, h1, h2, h3, h4, h5, h6{
+  font-family:Montserrat, sans-serif !important;
+}
+.btn.btn-primary.classRule-iaft4-test-Page1.pointer{
+  background-color:#3aa852 !important;
+  border:1px solid #89a3a0 !important;
+  align-items:center !important;
+}
+.form-group.flex.classRule-ibh9g-test-Page1{
+  justify-content:center !important;
+}
+.btn.btn-primary.classRule-iaft4-test-Page1.pointer:hover{
+  background-color:#53c86d !important;
+}
+.py-5.bg-dark.sticky-footer.classRule-i7msyk-test-Page1{
+  margin:0 0 0 0 !important;
+  padding:45px 0 31px 0 !important;
+  align-self:auto !important;
+}
+.gjs-row{
+  display:table;
+  padding-top:10px;
+  padding-right:10px;
+  padding-bottom:10px;
+  padding-left:10px;
+  width:100%;
+}
+.gjs-cell{
+  width:8%;
+  display:table-cell;
+  height:75px;
+}
+.form-group.flex.classRule-izgu-test-Page1{
+  border:2px solid #ced4da !important;
+  border-radius:20px !important;
+  background-color:#dbf8f9 !important;
+  justify-content:space-between !important;
+}
+.col-form-label.classRule-i1fa-test-Page1{
+  flex:0 0 10% !important;
+}
+.form-control.classRule-isi49-test-Page1{
+  border-radius:20.75px !important;
+  flex:0 0 10% !important;
+}
+.form-control.classRule-izj5j-test-Page1{
+  width:100px !important;
+  border-radius:20.75px !important;
+  flex:0 0 10% !important;
+}
+.col-form-label.classRule-ijsox-test-Page1{
+  flex:0 0 10% !important;
+}
+.form-group.flex.classRule-izgu-test-Page1.classRule-izpb4-test-Page1{
+  padding:0 0 0 0 !important;
+}
+.form-group.flex.classRule-izgu-test-Page1.classRule-i3xwu-test-Page1{
+  padding:0 37px 0 0 !important;
+}
+.form-control.classRule-isi49-test-Page1.classRule-iqkvl-test-Page1{
+  margin:0 -3px 0 0 !important;
+}
+.form-control.classRule-isi49-test-Page1.classRule-ik8yl-test-Page1{
+  margin:0 9px 0 0 !important;
+}
+.form-control.classRule-isi49-test-Page1.classRule-iq52z-test-Page1{
+  margin:0 3px 0 0 !important;
+}
+.col-form-label.classRule-ijsox-test-Page1.classRule-i6d3f-test-Page1{
+  margin:0 -31px 0 -36px !important;
+}
+.col-form-label.classRule-ijsox-test-Page1.classRule-i8slh-test-Page1{
+  margin:0 -14px 0 -36px !important;
+}
+.form-control.classRule-izj5j-test-Page1.classRule-id7ns-test-Page1{
+  margin:0 0 0 -32px !important;
+  flex:0 0 50% !important;
+}
+#izh9{
+  min-height:30px !important;
+  width:auto !important;
+}
+#inbvy{
+  min-height:30px !important;
+  width:auto !important;
+}
+#irw1h{
+  min-height:30px !important;
+  width:auto !important;
+}
+#ilqbv{
+  min-height:30px !important;
+  width:auto !important;
+}
+#id6kz{
+  min-height:30px !important;
+  width:auto !important;
+}
+#iq4bk{
+  min-height:30px !important;
+  width:auto !important;
+}
+.classRule-ilat3-test-Page1{
+  justify-content:center !important;
+  background-color:#a3ced0 !important;
+}
+#ib3pw{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-ib3pw-test-Page1{
+  justify-content:center !important;
+}
+.classRule-i9k5-test-Page1{
+  background-color:#a3ced0 !important;
+}
+.classRule-ij7c-test-Page1{
+  background-color:#a3ced0 !important;
+}
+.classRule-iwl6-test-Page1{
+  background-color:#a3ced0 !important;
+}
+.classRule-i2f6q-test-Page1{
+  background-color:#a3ced0 !important;
+}
+.col-form-label.classRule-iljt-test-Page1{
+  display:inline-block !important;
+  float:left !important;
+  width:30% !important;
+}
+.col-form-label.classRule-iif7u-test-Page1{
+  display:inline-block !important;
+  float:left !important;
+  width:30% !important;
+}
+.col-form-label.classRule-iljt-test-Page1.classRule-ide82-test-Page1{
+  border-radius:8px !important;
+  display:inline-block !important;
+}
+.form-control.classRule-ip3if-test-Page1.classRule-ipq9j-test-Page1{
+  border-radius:18.75px !important;
+  display:inline-block !important;
+  width:240px !important;
+}
+.form-control.classRule-ip3if-test-Page1{
+  border-radius:18.75px !important;
+  display:inline-block !important;
+  width:240px !important;
+}
+.form-control.classRule-ikoui-test-Page1{
+  border-radius:18.75px !important;
+  display:inline-block !important;
+  width:240px !important;
+}
+.form-control.classRule-ikoui-test-Page1.classRule-iv5gp-test-Page1{
+  display:inline-block !important;
+  width:240px !important;
+}
+.col-form-label.classRule-iif7u-test-Page1.classRule-iqguv-test-Page1{
+  display:inline-block !important;
+}
+.col-form-label.classRule-iljt-test-Page1.classRule-ioetq-test-Page1{
+  display:inline-block !important;
+}
+.form-control.classRule-ip3if-test-Page1.classRule-ijorf-test-Page1{
+  display:inline-block !important;
+  width:240px !important;
+}
+.col-form-label.classRule-iif7u-test-Page1.classRule-iuya5-test-Page1{
+  display:inline-block !important;
+}
+.form-control.classRule-ikoui-test-Page1.classRule-ibdas-test-Page1{
+  display:inline-block !important;
+  width:240px !important;
+}
+.btn.btn-primary.pointer.classRule-in5nt-test-Page1{
+  border-radius:20.75px !important;
+}
+.navbar-brand.classRule-ihnnz-test-Page1{
+  width:90px !important;
+  height:91px !important;
+  en: !important;
+}
+.container-fluid.classRule-ik0cg-test-Page1{
+  padding:50px 11.25px 0 11.25px !important;
+  background-color:#a3ced0 !important;
+}
+.form-group.flex.classRule-inbvy-test-Page1.classRule-iq4bk-test-Page1:hover{
+  box-shadow:3px 3px 7px 3px #a4e7fd inset !important;
+  border-radius:19px !important;
+}
+.form-group.flex.classRule-inbvy-test-Page1:hover{
+  box-shadow:3px 3px 7px 3px #a4e7fd inset !important;
+  border-radius:19px !important;
+}
+.form-group.flex.classRule-izh9-test-Page1:hover{
+  box-shadow:3px 3px 7px 3px #a4e7fd inset !important;
+  border-radius:19px !important;
+}
+.py-5.bg-dark.sticky-footer.classRule-i7oe2-test-Page1{
+  position:relative !important;
+}
+#iy1ho{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-iy1ho-test-Page1{
+  justify-content:center !important;
+  position:relative !important;
+}
+.pointer.classRule-inqmc-test-Page1{
+  en: !important;
+  position:relative !important;
+  width:369px !important;
+  height:45px !important;
+}
+#ijsmh{
+  color:black !important;
+}
+.pointer.classRule-ijsmh-test-Page1{
+  en: !important;
+  max-width:100% !important;
+}
+@media (max-width: 992px){
+  .col-form-label.classRule-ijsox-test-Page1{
+    margin:0 0 0 -50px !important;
   }
-  .table-stripped2 tr:nth-child(even){
-    background-color:#f2f2f2 !important;
+  .form-control.classRule-izj5j-test-Page1{
+    margin:0 108px 0 0 !important;
   }
-  .table-stripped2 td:not(:last-child){
-    border-right:3px solid white !important;
+  .col-form-label.classRule-ijsox-test-Page1.classRule-innls-test-Page1{
+    margin:0 0 0 12px !important;
   }
-  .table-stripped2 th:not(:last-child){
-    border-right:3px solid white !important;
+  .col-form-label.classRule-ijsox-test-Page1.classRule-i6d3f-test-Page1{
+    margin:0 0 0 11px !important;
   }
-  .sticky-footer{
-    position:fixed !important;
-    bottom:0 !important;
-    width:100% !important;
+  .col-form-label.classRule-ijsox-test-Page1.classRule-i8slh-test-Page1{
+    margin:0 0 0 -17px !important;
   }
-  .form-check .form-check-input{
-    display:inline-block !important;
-    margin-top:0.25vw !important;
+  .form-control.classRule-isi49-test-Page1{
+    margin:0 13px 0 -30px !important;
   }
-  .flex{
-    display:flex !important;
+  .form-control.classRule-isi49-test-Page1.classRule-iqkvl-test-Page1{
+    margin:0 -3px 0 8px !important;
   }
-  .w3-row-padding img{
-    margin-bottom:12px !important;
+  .form-control.classRule-isi49-test-Page1.classRule-ik8yl-test-Page1{
+    margin:0 -11px 0 0 !important;
   }
-  body, h1, h2, h3, h4, h5, h6{
-    font-family:Montserrat, sans-serif !important;
+  .form-control.classRule-isi49-test-Page1.classRule-iq52z-test-Page1{
+    margin:0 19px 0 0 !important;
   }
+}
+@media (max-width: 768px){
+  .gjs-cell{
+    width:100%;
+    display:block;
+  }
+}
+@media (max-width: 480px){
   .btn.btn-primary.classRule-iaft4-test-Page1.pointer{
-    background-color:#3aa852 !important;
-    border:1px solid #89a3a0 !important;
-    align-items:center !important;
+    top:auto !important;
+    background-color:#38ab51 !important;
+    justify-content:center !important;
+    border:1px solid #aeb9b8 !important;
+    opacity:0.80 !important;
   }
   .form-group.flex.classRule-ibh9g-test-Page1{
     justify-content:center !important;
   }
-  .btn.btn-primary.classRule-iaft4-test-Page1.pointer:hover{
-    background-color:#53c86d !important;
+  .col-form-label.classRule-ijsox-test-Page1{
+    margin:0 0 0 !important;
   }
-  #i2ilr5{
-    overflow-x:auto !important;
-  }
-  .py-5.bg-dark.sticky-footer.classRule-i7msyk-test-Page1{
+  .form-control.classRule-izj5j-test-Page1{
     margin:0 0 0 0 !important;
-    padding:45px 0 31px 0 !important;
-    align-self:auto !important;
   }
-  .col.py-3.classRule-i2ilr5-test-Page1{
-    padding:15px 11.25px 8px 11.25px !important;
+  .form-control.classRule-isi49-test-Page1{
+    margin:0 0 0 0 !important;
   }
-  @media (max-width: 480px){
-    .btn.btn-primary.classRule-iaft4-test-Page1.pointer{
-      top:auto !important;
-      background-color:#38ab51 !important;
-      justify-content:center !important;
-      border:1px solid #aeb9b8 !important;
-      opacity:0.80 !important;
-    }
-    .form-group.flex.classRule-ibh9g-test-Page1{
-      justify-content:center !important;
-    }
+  .form-group.flex.classRule-ib3pw-test-Page1{
+    justify-content:center !important;
   }
-  
+  .pointer.classRule-inqmc-test-Page1{
+    width:320px !important;
+    height:71px !important;
+    en: !important;
+  }
+}
