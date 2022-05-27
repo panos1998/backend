@@ -266,4 +266,7 @@ body{
   .form-group.flex.classRule-i8pfp-test-Page2{
     margin:-5px 0 15px 0 !important;
   }
+  .classRule-iifpi-test-Page2{
+    border-radius:23px !important;
+  }
 }
