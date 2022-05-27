@@ -37,10 +37,11 @@ async def func_metrics(request: Request,metrics:patient_metrics, Origin:str | No
     print("your waist circ is: ", metrics.waist)
     print("your vegfruit is: ", metrics.vegfruit)
     print("your protein is: ", metrics.protein)
+    print("we have recieved your test")
     return metrics
 
 @app.get("/", response_class= HTMLResponse)
-async def read_root(request: Request, Origin:str |None=Header(default=None)):
+async def read_root(request: Request, Origin:str | None=Header(default=None)):
     print('Origin: ', Origin)
     print(fastapi_version)
     print({
@@ -50,12 +51,12 @@ async def read_root(request: Request, Origin:str |None=Header(default=None)):
   "veg_fruit": 5,
   "protein": 3.5,
 })
-    return templates.TemplateResponse("Page1.html", {"request": request})
+    return templates.TemplateResponse("Page2.html", {"request": request})
 
 
-@app.get("/items/{item_id}")
-async def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
-    
+@app.get('/assess/', response_class=HTMLResponse)
+async def render_form(request: Request, Origin:str | None=Header(default=None)):
+  print('Origin: ', Origin)
+  return templates.TemplateResponse("Page1.html", {"request": request})
 #ssl_keyfile='./key.pem',
   ## # ssl_certfile='./cert.pem', 
