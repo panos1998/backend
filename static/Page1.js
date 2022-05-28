@@ -1,4 +1,6 @@
 document.getElementById('asses').onclick = (event) => {
+	const text = document.getElementById("ia0qji");
+	text.style.font =" bold 20px arial,serif";
 	data = {
 	  age: document.getElementsByName("Age")[0].value,
 	  BMI: document.getElementsByName("bmi")[0].value,
@@ -8,8 +10,7 @@ document.getElementById('asses').onclick = (event) => {
 	postData('https://biomedicalapp.herokuapp.com/metrics/', data)
 	  .then(data => {
 	  console.log(data);
-	 const text = document.getElementById("ia0qji");
-	 text.innerHTML = "Your risk assessment is:" + data[1];
+	 text.innerHTML = "Your risk assessment is:" +' ' + data[1];
 	  // JSON data parsed by `data.json()` call
 	}
 		   );
