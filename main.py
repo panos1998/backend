@@ -52,12 +52,12 @@ async def read_root(request: Request, Origin:str | None=Header(default=None)):
   "veg_fruit": 5,
   "protein": 3.5,
 })
-    return templates.TemplateResponse("Page2.html", {"request": request})
+    return templates.TemplateResponse("Page1.html", {"request": request})
 
 
 @app.get('/assess/', response_class=HTMLResponse)
 async def render_form(request: Request, Origin:str | None=Header(default=None)):
   print('Origin: ', Origin)
-  return templates.TemplateResponse("Page1.html", {"request": request})
+  return templates.TemplateResponse("Page2.html", {"request": request})
 #ssl_keyfile='./key.pem',
   ## # ssl_certfile='./cert.pem', 
