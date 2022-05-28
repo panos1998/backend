@@ -22,6 +22,12 @@ document.getElementById('itltu').onclick = (event) => {
 	  window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
 	}
   };
+  document.getElementById('if7cc').onclick = (event) => {
+	event.preventDefault();
+	{
+	  window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
+	}
+  };
   document.getElementById('id4q1').onclick = (event) => {
 	event.preventDefault();
 	{
