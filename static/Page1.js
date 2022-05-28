@@ -22,7 +22,7 @@ document.getElementById('asses').onclick = (event) => {
 	row4.remove();
 	results.style.setProperty("display", "inline-block", "important")
 	//document.getElementById("resultscell").style.display = "inline-block";
-	document.getElementById("footer").style.setProperty("position","static", "important");
+	document.getElementById("footer").style.setProperty("position","fixed", "important");
   };
   async function postData(url = '', data = {
   }
