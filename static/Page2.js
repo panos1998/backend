@@ -15,13 +15,13 @@ document.getElementById('asses').onclick = (event) => {
   const row2 = document.getElementById("row2");
   const row3 = document.getElementById("row3");
   const row4 = document.getElementById("row4");
-  const results = document.getElementById("results");
+  const results = document.getElementById("outterbox");
   row1.style.display="none";
   row2.remove();
   row3.remove();
   row4.remove();
   results.style.setProperty("display", "inline-block", "important")
-  //document.getElementById("resultscell").style.display = "inline-block";
+  document.getElementById("resultsbox").style.display = "inline-block";
   document.getElementById("footer").style.setProperty("position","fixed", "important");
 };
 async function postData(url = '', data = {
@@ -46,6 +46,12 @@ async function postData(url = '', data = {
   return response.json();
   // parses JSON response into native JavaScript objects
 }
+document.getElementById('ilig6').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = 'https://biomedicalapp.herokuapp.com/';
+  }
+};
 document.getElementById('igjq3').onclick = (event) => {
   event.preventDefault();
   {

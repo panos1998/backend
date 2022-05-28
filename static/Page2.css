@@ -268,6 +268,10 @@ body, h1, h2, h3, h4, h5, h6{
 .form-group.flex.classRule-ikwc1-test-Page1{
   max-width:30% !important;
 }
+.card.classRule-ix1ac-test-Page1{
+  width:421px !important;
+  en:1;
+}
 #ilat3{
   transform: translateX(0px) translateY(37.5px) !important;
   en: !important;
@@ -277,6 +281,19 @@ body, h1, h2, h3, h4, h5, h6{
   position:relative !important;
   height:60% !important;
 }
+.card-title.classRule-iv1sl-test-Page1{
+  justify-content:center !important;
+  text-align:center !important;
+}
+.card-body.classRule-i1ly8-test-Page1{
+  position:relative !important;
+  height:50% !important;
+}
+.card.classRule-iyuh3-test-Page1{
+  border-radius:22.75px !important;
+  border:2px solid #c7d1de !important;
+  position:relative !important;
+}
 .btn.btn-primary.classRule-iift4g-test-Page1{
   position:relative !important;
   height:30% !important;
@@ -284,9 +301,8 @@ body, h1, h2, h3, h4, h5, h6{
 .form-group.flex.classRule-ilabf-test-Page1{
   justify-content:center !important;
 }
-.classRule-iui8d-test-Page1{
+.card-body.classRule-imztph-test-Page1{
   justify-content:center !important;
-  background-color:#a3ced0 !important;
 }
 .btn.btn-primary.pointer.classRule-iwqrt-test-Page1{
   width:300px !important;
@@ -328,6 +344,35 @@ body, h1, h2, h3, h4, h5, h6{
 }
 .dropdown-menu.classRule-i6ehj-test-Page2{
   left:-70px !important;
+}
+.classRule-icb3m-test-Page2{
+  background-color:#a3ced0 !important;
+}
+#resultsbox{
+  min-height:30px !important;
+  width:auto !important;
+}
+#outterbox{
+  width:18rem !important;
+}
+.form-group.flex.classRule-idh62-test-Page2{
+  justify-content:center !important;
+}
+.card-title.classRule-igrlk-test-Page2{
+  text-align:center !important;
+}
+.card-body.classRule-i42f8-test-Page2{
+  border-radius:16px !important;
+}
+.card.classRule-ibkly-test-Page2{
+  border-radius:18.75px !important;
+  display:none !important;
+}
+body{
+  background-color:#a3ced0 !important;
+}
+#ixc08{
+  display:none !important;
 }
 @media (max-width: 992px){
   .col-form-label.classRule-ijsox-test-Page1{
