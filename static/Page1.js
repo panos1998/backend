@@ -1,4 +1,10 @@
-document.getElementById('iil9f').onclick = (event) => {
+document.getElementById('itltu').onclick = (event) => {
+	event.preventDefault();
+	{
+	  window.document.location = 'https://biomedicalapp.herokuapp.com/';
+	}
+  };
+  document.getElementById('iil9f').onclick = (event) => {
 	event.preventDefault();
 	{
 	  window.document.location = 'https://biomedicalapp.herokuapp.com/';
@@ -13,7 +19,13 @@ document.getElementById('iil9f').onclick = (event) => {
   document.getElementById('ijlzf').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'http://localhost:3000/templates/html/Page1.html';
+	  window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
+	}
+  };
+  document.getElementById('id4q1').onclick = (event) => {
+	event.preventDefault();
+	{
+	  window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
 	}
   };
   window.onload = () => {
