@@ -92,24 +92,8 @@ body, h1, h2, h3, h4, h5, h6{
   height:123px !important;
   en: !important;
 }
-.classRule-iadsd-test-Page2{
-  justify-content:center !important;
-  margin:17px 0 30px 0 !important;
-}
-.classRule-ioj7r-test-Page2{
-  justify-content:center !important;
-  background-color:#a3ced0 !important;
-}
-#i7gnc{
-  min-height:30px !important;
-  width:auto !important;
-}
 .form-group.flex.classRule-i7gnc-test-Page2{
   justify-content:center !important;
-}
-#i8pfp{
-  min-height:30px !important;
-  width:auto !important;
 }
 #id4q1{
   color:black !important;
@@ -191,10 +175,6 @@ body, h1, h2, h3, h4, h5, h6{
   background-color:#c2d9da !important;
   border:solid #5f5f5f !important;
 }
-.classRule-izjg1-test-Page2{
-  margin:0 0 6px 0 !important;
-  padding:0 0 0 0 !important;
-}
 .py-5.bg-dark.sticky-footer.classRule-i31mi-test-Page2{
   padding:11px 0 10px 0 !important;
 }
@@ -241,6 +221,65 @@ body{
 .dropdown-menu.classRule-i0lei-test-Page2{
   left:-70px !important;
 }
+.classRule-ifcqv-test-Page2.classRule-ifcqv-test-Page1{
+  position:relative !important;
+}
+.form-group.flex.classRule-i8pfp-test-Page2.classRule-i8pfp-test-Page1{
+  position:relative !important;
+}
+.form-group.flex.classRule-i3lrp-test-Page2.classRule-i3lrp-test-Page1{
+  position:relative !important;
+}
+.pointer.classRule-icl9l-test-Page2.classRule-icl9l-test-Page1{
+  en: !important;
+  margin:0 0 0 0 !important;
+}
+.py-5.bg-dark.sticky-footer.classRule-i6vyh-test-Page1{
+  position:relative !important;
+  height:40% !important;
+}
+.pointer.classRule-id4q1-test-Page2.classRule-id4q1-test-Page1{
+  en: !important;
+}
+#ieloi{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-ieloi-test-Page1{
+  justify-content:center !important;
+  max-width:100% !important;
+}
+#isffs{
+  color:black !important;
+}
+.form-group.flex.classRule-ijlzf-test-Page2.pointer.classRule-ijlzf-test-Page1{
+  position:relative !important;
+}
+#icryq{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-icryq-test-Page1{
+  justify-content:center !important;
+  position:relative !important;
+  margin:30px 0 25px 0 !important;
+}
+#iwm73{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-iwm73-test-Page1{
+  justify-content:center !important;
+  position:relative !important;
+  margin:40px 0 15px 0 !important;
+}
+.classRule-icsu3-test-Page1{
+  margin:0 0 200px 0 !important;
+}
+.classRule-iwzxf-test-Page1{
+  position:relative !important;
+  margin:0 0 160px 0 !important;
+}
 @media fadeEffect{
   0%{
     opacity:0;
@@ -275,6 +314,15 @@ body{
   .form-group.flex.classRule-ijlzf-test-Page2{
     margin:0 0 6px 0 !important;
   }
+  .form-group.flex.classRule-i8pfp-test-Page2.classRule-i8pfp-test-Page1{
+    justify-content:center !important;
+  }
+  .form-group.flex.classRule-i3lrp-test-Page2.classRule-i3lrp-test-Page1{
+    margin:10px 0 0 0 !important;
+  }
+  .pointer.classRule-id4q1-test-Page2.classRule-id4q1-test-Page1{
+    margin:0 32px 0 !important;
+  }
 }
 @media (max-width: 768px){
   .gjs-cell{
@@ -287,9 +335,6 @@ body{
     width:77px !important;
     height:77px !important;
     en: !important;
-  }
-  .classRule-iadsd-test-Page2{
-    margin:34px 0 34px 0 !important;
   }
   .form-group.flex.classRule-i7gnc-test-Page2{
     margin:19px 0 0 0 !important;
@@ -314,5 +359,26 @@ body{
   }
   .classRule-iifpi-test-Page2{
     border-radius:23px !important;
+  }
+  .py-5.bg-dark.sticky-footer.classRule-i7oe2-test-Page1.classRule-isl25-test-Page2{
+    position:relative !important;
+    max-width:100% !important;
+  }
+  .pointer.classRule-ijsmh-test-Page1.classRule-i24jt-test-Page2{
+    max-width:100% !important;
+  }
+  .form-group.flex.classRule-i8pfp-test-Page2.classRule-i8pfp-test-Page1{
+    position:relative !important;
+    height:100% !important;
+  }
+  .pointer.classRule-icl9l-test-Page2.classRule-icl9l-test-Page1{
+    position:relative !important;
+    en: !important;
+  }
+  .pointer.classRule-isffs-test-Page1{
+    max-width:100% !important;
+  }
+  .classRule-icsu3-test-Page1{
+    margin:70px 0 200px 0 !important;
   }
 }
