@@ -1,52 +1,21 @@
-document.getElementById('asses').onclick = (event) => {
-	const text = document.getElementById("ia0qji");
-	text.style.font =" bold 20px arial,serif";
-	data = {
-	  age: document.getElementsByName("Age")[0].value,
-	  BMI: document.getElementsByName("bmi")[0].value,
-	  waist: document.getElementsByName("Waist")[0].value,
-	  vegfruit: document.getElementsByName("vegfruit")[0].value,
-	  protein: document.getElementsByName("protein")[0].value}
-	postData('https://biomedicalapp.herokuapp.com/metrics/', data)
-	  .then(data => {
-	  console.log(data);
-	 text.innerHTML = "Your risk assessment is:" +' ' + data[1];
-	  // JSON data parsed by `data.json()` call
+document.getElementById('iil9f').onclick = (event) => {
+	event.preventDefault();
+	{
+	  window.document.location = 'https://biomedicalapp.herokuapp.com/';
 	}
-		   );
-	const row1 = document.getElementById("row1");
-	const row2 = document.getElementById("row2");
-	const row3 = document.getElementById("row3");
-	const row4 = document.getElementById("row4");
-	const results = document.getElementById("results");
-	row1.remove();
-	row2.remove();
-	row3.remove();
-	row4.remove();
-	results.style.setProperty("display", "inline-block", "important")
-	//document.getElementById("resultscell").style.display = "inline-block";
-	document.getElementById("footer").style.setProperty("position","fixed", "important");
   };
-  async function postData(url = '', data = {
-  }
-						  ) {
-	// Default options are marked with *
-	const response = await fetch(url, {
-	  method: 'POST', // *GET, POST, PUT, DELETE, etc.
-	  mode: 'cors', // no-cors, *cors, same-origin
-	  cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-	  credentials: 'same-origin', // include, *same-origin, omit
-	  headers: {
-		'Content-Type': 'application/json'
-		// 'Content-Type': 'application/x-www-form-urlencoded',
-	  }
-	  ,
-	  redirect: 'follow', // manual, *follow, error
-	  referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-	  body: JSON.stringify(data) // body data type must match "Content-Type" header
+  document.getElementById('ik25u').onclick = (event) => {
+	event.preventDefault();
+	{
+	  window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
 	}
-								);
-	return response.json();
-	// parses JSON response into native JavaScript objects
-  }
+  };
+  document.getElementById('ijlzf').onclick = (event) => {
+	event.preventDefault();
+	{
+	  window.document.location = 'http://localhost:3000/templates/html/Page1.html';
+	}
+  };
+  window.onload = () => {
+  };
   
