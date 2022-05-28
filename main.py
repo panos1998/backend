@@ -38,7 +38,8 @@ async def func_metrics(request: Request,metrics:patient_metrics, Origin:str | No
     print("your vegfruit is: ", metrics.vegfruit)
     print("your protein is: ", metrics.protein)
     print("we have recieved your test")
-    return metrics
+    prob = 0.24
+    return metrics, prob
 
 @app.get("/", response_class= HTMLResponse)
 async def read_root(request: Request, Origin:str | None=Header(default=None)):
