@@ -17,8 +17,11 @@ class patient_metrics(BaseModel):
     waist: float
     vegfruit: int
     protein: float
-    date = date.today
-    prob = 0
+    date:date = date.today()
+    prob:float = 0
+    class Config:
+      arbitrary_types_allowed = True
+
 templates = Jinja2Templates(directory="templates/html")
 print(fastapi_version)
 app = FastAPI()
