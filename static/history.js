@@ -1,8 +1,9 @@
 document.getElementById('iy4ml').onclick = (event) => {
     document.getElementById('history-container').style.setProperty('display','inline-block','important');
     document.getElementById('hide-button').style.setProperty('display','inline-block','important');
-    readlocalstorage();
+    ;
   };
+  readlocalstorage()
   function readlocalstorage(){
     var retrievedata= JSON.parse(localStorage.getItem('records'))
     if (retrievedata === null){
@@ -10,10 +11,15 @@ document.getElementById('iy4ml').onclick = (event) => {
     else if(!Array.isArray(retrievedata)){
       console.log(retrievedata)}
     else {
+      const container = document.getElementById('history-container');
       retrievedata.forEach(element => {
+        const record = document.getElementById('history-record');
+        const clone = record.cloneNode(true);
+        container.appendChild(clone);
         console.log(element)
       }
                           );
+      container.childNodes[0].remove()
     }
   }
   document.getElementById('hide-button').onclick = (event) => {
