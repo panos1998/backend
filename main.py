@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import datetime
 from fastapi import __version__ as fastapi_version
 from typing import Optional
 from pydantic import BaseModel
@@ -17,7 +17,7 @@ class patient_metrics(BaseModel):
     waist: float
     vegfruit: int
     protein: float
-    dt: str = ''+date.today()+''
+    dt: str = ""
     prob:float = 0
     class Config:
       arbitrary_types_allowed = True
@@ -45,6 +45,7 @@ async def func_metrics(request: Request,metrics:patient_metrics, Origin:str | No
     print("your protein is: ", metrics.protein)
     print("we have recieved your test")
     prob = 0.24
+    metrics.dt = datetime.today().strftime('%d-%m-%Y')
     metrics.prob = prob
     return metrics
 
