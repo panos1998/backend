@@ -17,6 +17,8 @@ class patient_metrics(BaseModel):
     waist: float
     vegfruit: int
     protein: float
+    date: date = date.today()
+    prob: float = 0
 templates = Jinja2Templates(directory="templates/html")
 print(fastapi_version)
 app = FastAPI()
@@ -40,10 +42,8 @@ async def func_metrics(request: Request,metrics:patient_metrics, Origin:str | No
     print("your protein is: ", metrics.protein)
     print("we have recieved your test")
     prob = 0.24
-    dict = metrics
-    dict['date'] = date.today()
-    dict['prob'] = prob
-    return dict
+    metrics['prob'] = prob
+    return metrics
 
 @app.get("/", response_class= HTMLResponse)
 async def read_root(request: Request, Origin:str | None=Header(default=None)):
