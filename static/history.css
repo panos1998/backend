@@ -278,6 +278,9 @@
   .btn.pointer.bi.bi-trash.delete-btn.classRule-i8vpl-test-History{
     display:none !important;
   }
+  body{
+    background-color:#a3ced0 !important;
+  }
   @media fadeEffect{
     0%{
       opacity:0;
