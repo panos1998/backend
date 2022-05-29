@@ -233,24 +233,46 @@
   .pointer.classRule-i55xk-test-History{
     max-width:100% !important;
   }
-  #history-container{
-    min-height:30px !important;
-    width:auto !important;
-  }
-  body{
-    background-color:#a3ced0 !important;
-  }
   #i14zo{
     min-height:30px !important;
     width:auto !important;
   }
   .form-group.flex.classRule-i14zo-test-History{
     justify-content:space-around !important;
+    background-color:#a3ced0 !important;
   }
   .form-group.flex.classRule-izwo8-test-History{
     display:none !important;
   }
   .btn.pointer.bi.bi-trash.delete-btn.classRule-i1a6h-test-History{
+    display:none !important;
+  }
+  .classRule-i3f5h-test-History{
+    background-color:#a3ced0 !important;
+  }
+  .classRule-igyjf-test-History{
+    background-color:#a3ced0 !important;
+  }
+  .form-group.flex.classRule-i6avg-test-History{
+    background-color:#a3ced0 !important;
+  }
+  #history-container{
+    min-height:30px !important;
+    width:auto !important;
+  }
+  .classRule-iww1j-test-History{
+    background-color:#a3ced0 !important;
+  }
+  .classRule-isr0k-test-History{
+    background-color:#a3ced0 !important;
+  }
+  .classRule-iwv42-test-History{
+    display:none !important;
+  }
+  #iwv42{
+    display:none !important;
+  }
+  .form-group.flex.classRule-i27sh-test-History{
     display:none !important;
   }
   @media fadeEffect{
