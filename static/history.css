@@ -275,6 +275,9 @@
   .form-group.flex.classRule-i27sh-test-History{
     display:none !important;
   }
+  .btn.pointer.bi.bi-trash.delete-btn.classRule-i8vpl-test-History{
+    display:none !important;
+  }
   @media fadeEffect{
     0%{
       opacity:0;
