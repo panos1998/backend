@@ -7,12 +7,14 @@ document.getElementById('asses').onclick = (event) => {
     protein: document.getElementsByName("protein")[0].value}
   postData('https://biomedicalapp.herokuapp.com/metrics/', data)
     .then(data => {
+    writedata(data);
     console.log(data);
     document.getElementById('imj0w').innerHTML= data['prob'];
     if (data['prob']<0.5){
       color = 'lightgreen';
     }
-    else{color = 'coral'}
+    else{
+      color = 'coral'}
     document.getElementById('bigbox').style.setProperty('background-color',color,'important');
     // JSON data parsed by `data.json()` call
   }
@@ -52,6 +54,20 @@ async function postData(url = '', data = {
   return response.json();
   // parses JSON response into native JavaScript objects
 }
+function writedata(inputdata){
+  if (localStorage.getItem('records')===null){
+    console.log('ksekiniste  tora tin dokimi sas')
+    localStorage.setItem('records',JSON.stringify(inputdata))
+  }
+  else{
+    var records2 = []
+    var retrievedata = localStorage.getItem('records')
+    records2.push(JSON.parse(retrievedata))
+    records2 = records2.flat()
+    records2.push(inputdata)
+    localStorage.setItem('records',JSON.stringify(records2))
+  }
+};
 document.getElementById('ilig6').onclick = (event) => {
   event.preventDefault();
   {
