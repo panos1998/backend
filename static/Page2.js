@@ -86,5 +86,11 @@ document.getElementById('ioo4h').onclick = (event) => {
     window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
   }
 };
+document.getElementById('iseba').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+  }
+};
 window.onload = () => {
 };
