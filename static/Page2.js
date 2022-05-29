@@ -7,9 +7,9 @@ document.getElementById('asses').onclick = (event) => {
     protein: document.getElementsByName("protein")[0].value}
   postData('https://biomedicalapp.herokuapp.com/metrics/', data)
     .then(data => {
-    console.log(data)
-    document.getElementById('imj0w').innerHTML= data[1]
-    if (data[1]<0.5){
+    console.log(data);
+    document.getElementById('imj0w').innerHTML= data['prob'];
+    if (data['prob']<0.5){
       color = 'lightgreen';
     }
     else{color = 'coral'}
