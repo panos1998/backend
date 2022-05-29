@@ -1,3 +1,4 @@
+from datetime import date
 from fastapi import __version__ as fastapi_version
 from typing import Optional
 from pydantic import BaseModel
@@ -39,7 +40,10 @@ async def func_metrics(request: Request,metrics:patient_metrics, Origin:str | No
     print("your protein is: ", metrics.protein)
     print("we have recieved your test")
     prob = 0.24
-    return metrics, prob
+    dict = metrics
+    dict['date'] = date.today()
+    dict['prob'] = prob
+    return dict
 
 @app.get("/", response_class= HTMLResponse)
 async def read_root(request: Request, Origin:str | None=Header(default=None)):
@@ -59,5 +63,9 @@ async def read_root(request: Request, Origin:str | None=Header(default=None)):
 async def render_form(request: Request, Origin:str | None=Header(default=None)):
   print('Origin: ', Origin)
   return templates.TemplateResponse("Page2.html", {"request": request})
+
+@app.get('/history/', response_class=HTMLResponse)
+async def render_history(request: Request, Origin: str | None=Header(default=None)):
+  print('Origin: ', Origin)
 #ssl_keyfile='./key.pem',
   ## # ssl_certfile='./cert.pem', 
