@@ -24,20 +24,14 @@ document.getElementById('iy4ml').onclick = (event) => {
         const record = document.getElementById('history-record');
         if(!Array.isArray(retrievedata)){
             retrievedata = [retrievedata]
-        /*for(const [key,value] of Object.entries(retrievedata)){
-            record.setAttribute('data-'+key+"", ''+value+'');*/
         }
-        /*const clone = record.cloneNode(true);
-        clone.textContent = record.getAttribute('data-dt');
-        container.appendChild(clone);
-        console.log(retrievedata);
-        container.children[0].remove()}*/
-      //else {
         retrievedata.forEach(element => {
           const clone = record.cloneNode(true);
           for (const [key, value] of Object.entries(element)){
             clone.setAttribute('data-'+key+'', ''+value+'');
-          }
+            if(clone.getAttribute('data-prob')<0.5){clone.style.setProperty('background-color','lightgreen', 'important');}
+            else {clone.style.setProperty('background-color', 'coral', 'important');}    
+        }
           clone.innerHTML = clone.getAttribute('data-dt')+" <br>"+clone.getAttribute('data-prob');
           container.appendChild(clone);
           console.log(element)
@@ -46,7 +40,6 @@ document.getElementById('iy4ml').onclick = (event) => {
         container.children[0].remove()
       }
    } 
-  //}
   document.getElementById('hide-button').onclick = (event) => {
     document.getElementById('history-container').style.setProperty('display','none','important');
   };
