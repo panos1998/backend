@@ -71,5 +71,6 @@ async def render_form(request: Request, Origin:str | None=Header(default=None)):
 @app.get('/history/', response_class=HTMLResponse)
 async def render_history(request: Request, Origin: str | None=Header(default=None)):
   print('Origin: ', Origin)
+  return templates.TemplateResponse("history.html", {request:request})
 #ssl_keyfile='./key.pem',
   ## # ssl_certfile='./cert.pem', 
