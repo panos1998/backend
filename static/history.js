@@ -1,13 +1,12 @@
 document.getElementById('staticBackdrop').addEventListener('show.bs.modal',(event)=>{
- console.log('paok')
- var button = event.relatedTarget;
- var type = button.type;
- //var modal = document.getElementById('staticBackdrop');
- document.getElementById('staticBackdropLabel').textContent= button.getAttribute('data-bmi');
-
-})
-
-document.getElementById('iy4ml').onclick = (event) => {
+    console.log('paok')
+    var button = event.relatedTarget;
+    var type = button.type;
+    //var modal = document.getElementById('staticBackdrop');
+    document.getElementById('staticBackdropLabel').textContent= button.getAttribute('data-bmi');
+  }
+                                                            )
+  document.getElementById('iy4ml').onclick = (event) => {
     document.getElementById('history-container').style.setProperty('display','inline-block','important');
     document.getElementById('hide-button').style.setProperty('display','inline-block','important');
     ;
@@ -20,26 +19,30 @@ document.getElementById('iy4ml').onclick = (event) => {
       kouti.children[0].remove();
       console.log("empty array")}
     else {
-        const container = document.getElementById('history-container');
-        const record = document.getElementById('history-record');
-        if(!Array.isArray(retrievedata)){
-            retrievedata = [retrievedata]
-        }
-        retrievedata.forEach(element => {
-          const clone = record.cloneNode(true);
-          for (const [key, value] of Object.entries(element)){
-            clone.setAttribute('data-'+key+'', ''+value+'');
-            if(clone.getAttribute('data-prob')<0.5){clone.style.setProperty('background-color','lightgreen', 'important');}
-            else {clone.style.setProperty('background-color', 'coral', 'important');}    
-        }
-          clone.innerHTML = clone.getAttribute('data-dt')+" <br>"+clone.getAttribute('data-prob');
-          container.appendChild(clone);
-          console.log(element)
-        }
-                            );
-        container.children[0].remove()
+      const container = document.getElementById('history-container');
+      const record = document.getElementById('history-record');
+      if(!Array.isArray(retrievedata)){
+        retrievedata = [retrievedata]
       }
-   } 
+      retrievedata.forEach(element => {
+        const clone = record.cloneNode(true);
+        for (const [key, value] of Object.entries(element)){
+          clone.setAttribute('data-'+key+'', ''+value+'');
+          if(clone.getAttribute('data-prob')<0.5){
+            clone.style.setProperty('background-color','lightgreen', 'important');
+          }
+          else {
+            clone.style.setProperty('background-color', 'coral', 'important');
+          }
+        }
+        clone.textContent = clone.getAttribute('data-prob');
+        container.appendChild(clone);
+        console.log(element)
+      }
+                          );
+      container.children[0].remove()
+    }
+  }
   document.getElementById('hide-button').onclick = (event) => {
     document.getElementById('history-container').style.setProperty('display','none','important');
   };

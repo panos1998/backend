@@ -265,6 +265,7 @@
   }
   .classRule-isr0k-test-History{
     background-color:#a3ced0 !important;
+    margin:0 0 100px !important 0 !important;
   }
   .classRule-iwv42-test-History{
     display:none !important;
@@ -277,6 +278,16 @@
   }
   .btn.pointer.bi.bi-trash.delete-btn.classRule-i8vpl-test-History{
     display:none !important;
+  }
+  body{
+    background-color:#a3ced0 !important;
+  }
+  .py-5.bg-dark.sticky-footer.classRule-i50yj-test-History{
+    margin:600px 0 0 !important;
+    position:relative !important;
+  }
+  .classRule-i4wb2-test-History{
+    position:relative !important;
   }
   @media fadeEffect{
     0%{
@@ -372,6 +383,12 @@
     }
     .pointer.classRule-isffs-test-Page1{
       max-width:100% !important;
+    }
+    .py-5.bg-dark.sticky-footer.classRule-i50yj-test-History{
+      position:relative !important;
+    }
+    .classRule-isr0k-test-History{
+      margin:0 0 200px !important 0 !important;
     }
   }
   
