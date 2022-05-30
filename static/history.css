@@ -310,7 +310,8 @@ body{
   width:auto !important;
 }
 .btn.btn-primary.classRule-ik9wm-test-History{
-  margin:0 20px 0 0 !important;
+  margin:0 20px 10px 0 !important;
+  border:solid lightgreen !important;
 }
 body{
   background-color:#a3ced0 !important;
