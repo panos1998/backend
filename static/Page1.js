@@ -46,6 +46,12 @@ document.getElementById('itltu').onclick = (event) => {
 	  window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
 	}
   };
+  document.getElementById('i880j').onclick = (event) => {
+	event.preventDefault();
+	{
+	  window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+	}
+  };
   document.getElementById('icl9l').onclick = (event) => {
 	event.preventDefault();
 	{
