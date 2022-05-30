@@ -1,39 +1,48 @@
-document.getElementById('asses').onclick = (event) => {
-  data = {
-    age: document.getElementsByName("Age")[0].value,
-    BMI: document.getElementsByName("bmi")[0].value,
-    waist: document.getElementsByName("Waist")[0].value,
-    vegfruit: document.getElementsByName("vegfruit")[0].value,
-    protein: document.getElementsByName("protein")[0].value}
-    const row1 = document.getElementById("row1");
-    const row2 = document.getElementById("row2");
-    const row3 = document.getElementById("row3");
-    const row4 = document.getElementById("row4");
-    const results = document.getElementById("outterbox");
-    row1.remove();
-    row2.remove();
-    row3.remove();
-    row4.remove();
-  postData('https://biomedicalapp.herokuapp.com/metrics/', data)
-    .then(data => {
-    writedata(data);
-    console.log(data);
-    document.getElementById('imj0w').innerHTML= data['prob'];
-    if (data['prob']<0.5){
-      color = 'lightgreen';
-    }
-    else{
-      color = 'coral'}
-    document.getElementById('bigbox').style.setProperty('background-color',color,'important');
-    // JSON data parsed by `data.json()` call
+document.getElementById('results-card').style.setProperty("display","none","important");
+document.getElementById('assess-button').onclick = (event) => {
+  var input = [document.getElementsByName('weight')[0].value, document.getElementsByName('systolic')[0].value, document.getElementsByName('bmi')[0].value,document.getElementsByName("diastolic")[0].value, document.getElementsByName('waist')[0].value,  document.getElementsByName('grain')[0].value,  document.getElementsByName('oximetry')[0].value, document.getElementsByName('fruits')[0].value,  document.getElementsByName('protein')[0].value,  document.getElementsByName('vegetables')[0].value,  document.getElementsByName('dairy')[0].value, document.getElementsByName('calories')[0].value];
+  let hasNegative = input.some(value=> value<0);
+  let hasNull = input.some(value=> value=="");
+  console.log(input)
+  if(hasNegative){
+    document.getElementById('results-text').innerHTML="Please don't give negative values"
+    document.getElementById('results-card').style.setProperty("display","block","important");
+    document.getElementById('results-card').style.setProperty('background-color','Khaki',"important");
   }
-         );
-  document.getElementById("footer").style.setProperty("position","fixed", "important");
-  setTimeout(()=>{
-  results.style.setProperty("display", "inline-block", "important")
-  document.getElementById("resultsbox").style.display = "inline-block";
-  }, 150);
-  
+  else if(hasNull){
+    document.getElementById('results-text').innerHTML="Please fill all fields"
+    document.getElementById('results-card').style.setProperty("display","block","important");
+    document.getElementById('results-card').style.setProperty('background-color','Khaki',"important");
+  }
+  else{
+    document.getElementById('form-box').style.setProperty("display","none","important");
+    const data = {
+      weight:input[0],
+      BMI:input[2],
+      waist:input[4],
+      systolic:input[1],
+      diastolic:input[3],
+      oxymetry:input[6],
+      grain:input[5],
+      fruit:input[7],
+      vegan:input[9],
+      dairy:input[10],
+      protein:input[8],
+      total_cal:input[11]
+    }
+    postData("https://biomedicalapp.herokuapp.com/metrics/",data).then(data=>{
+      let prob = data['prob']
+      writedata(data);
+      console.log(data);
+      const color = prob<0.5 ? 'lightgreen':'coral';
+      document.getElementById('assess-button').style.setProperty('display','none','important');
+      document.getElementById('results-card').style.setProperty('display','block','important');
+      document.getElementById('footer').style.setProperty('position','fixed','important');
+      document.getElementById('results-card').style.setProperty('background-color',color,'important');
+      document.getElementById('results-text').innerHTML='Your risk probability is'+" "+prob+"";
+    }
+                                                                      );
+  }
 };
 async function postData(url = '', data = {
 }
@@ -71,28 +80,28 @@ function writedata(inputdata){
     localStorage.setItem('records',JSON.stringify(records2))
   }
 };
-document.getElementById('ilig6').onclick = (event) => {
+document.getElementById('iwpg').onclick = (event) => {
   event.preventDefault();
   {
     window.document.location = 'https://biomedicalapp.herokuapp.com/';
   }
 };
-document.getElementById('igjq3').onclick = (event) => {
-  event.preventDefault();
-  {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/';
-  }
-};
-document.getElementById('ioo4h').onclick = (event) => {
+document.getElementById('iszlx').onclick = (event) => {
   event.preventDefault();
   {
     window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
   }
 };
-document.getElementById('iseba').onclick = (event) => {
+document.getElementById('i80i7').onclick = (event) => {
   event.preventDefault();
   {
     window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+  }
+};
+document.getElementById('navigator-history').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = 'https://biomedicalede.herokuapp.com/history/';
   }
 };
 window.onload = () => {
