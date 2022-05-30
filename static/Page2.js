@@ -5,6 +5,15 @@ document.getElementById('asses').onclick = (event) => {
     waist: document.getElementsByName("Waist")[0].value,
     vegfruit: document.getElementsByName("vegfruit")[0].value,
     protein: document.getElementsByName("protein")[0].value}
+    const row1 = document.getElementById("row1");
+    const row2 = document.getElementById("row2");
+    const row3 = document.getElementById("row3");
+    const row4 = document.getElementById("row4");
+    const results = document.getElementById("outterbox");
+    row1.remove();
+    row2.remove();
+    row3.remove();
+    row4.remove();
   postData('https://biomedicalapp.herokuapp.com/metrics/', data)
     .then(data => {
     writedata(data);
@@ -19,18 +28,12 @@ document.getElementById('asses').onclick = (event) => {
     // JSON data parsed by `data.json()` call
   }
          );
-  const row1 = document.getElementById("row1");
-  const row2 = document.getElementById("row2");
-  const row3 = document.getElementById("row3");
-  const row4 = document.getElementById("row4");
-  const results = document.getElementById("outterbox");
-  row1.style.display="none";
-  row2.remove();
-  row3.remove();
-  row4.remove();
+  document.getElementById("footer").style.setProperty("position","fixed", "important");
+  setTimeout(()=>{
   results.style.setProperty("display", "inline-block", "important")
   document.getElementById("resultsbox").style.display = "inline-block";
-  document.getElementById("footer").style.setProperty("position","fixed", "important");
+  }, 150);
+  
 };
 async function postData(url = '', data = {
 }
