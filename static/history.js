@@ -2,10 +2,13 @@ document.getElementById('staticBackdrop').addEventListener('show.bs.modal',(even
   console.log('paok')
   var button = event.relatedTarget;
   var details = {
-    "Age": button.getAttribute('data-age'),"BMI":button.getAttribute('data-bmi'),
-    "Waist-circ":button.getAttribute('data-waist'),"Veg-Fruit":button.getAttribute('data-vegfruit'),
-    "Protein":button.getAttribute('data-protein'),"Date":button.getAttribute('data-dt'),
-    "Risk probability":button.getAttribute('data-prob')};
+    "Weight": button.getAttribute('weight'),"BMI":button.getAttribute('data-bmi'),
+    "Waist-circ":button.getAttribute('data-waist'),"Systolic":button.getAttribute('data-systolic'),
+    "Diastolic":button.getAttribute('data-diastolic'), "Oxymetry": button.getAttribute("data-oxymetry"),
+    "Grain": button.getAttribute("data-grain"),"Fruit": button.getAttribute('data-fruit'),
+    "Vegetables":button.getAttribute('data-vegan'),"Dairy": button.getAttribute('data-dairy'),
+    "Protein":button.getAttribute('data-protein'),"Total Calories":button.getAttribute("data-total_calories"),
+    "Date":button.getAttribute('data-dt'),"Risk probability":button.getAttribute('data-prob')};
   var list = document.getElementById('display-card').children[1]
   list.style.setProperty('list-style', 'none', 'important')
   var display_card = document.getElementById('display-card');
