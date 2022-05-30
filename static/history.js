@@ -2,12 +2,12 @@ document.getElementById('staticBackdrop').addEventListener('show.bs.modal',(even
   console.log('paok')
   var button = event.relatedTarget;
   var details = {
-    "Weight": button.getAttribute('weight'),"BMI":button.getAttribute('data-bmi'),
+    "Weight": button.getAttribute('data-weight'),"BMI":button.getAttribute('data-bmi'),
     "Waist-circ":button.getAttribute('data-waist'),"Systolic":button.getAttribute('data-systolic'),
     "Diastolic":button.getAttribute('data-diastolic'), "Oxymetry": button.getAttribute("data-oxymetry"),
     "Grain": button.getAttribute("data-grain"),"Fruit": button.getAttribute('data-fruit'),
     "Vegetables":button.getAttribute('data-vegan'),"Dairy": button.getAttribute('data-dairy'),
-    "Protein":button.getAttribute('data-protein'),"Total Calories":button.getAttribute("data-total_calories"),
+    "Protein":button.getAttribute('data-protein'),"Total Calories":button.getAttribute("data-total_cal"),
     "Date":button.getAttribute('data-dt'),"Risk probability":button.getAttribute('data-prob')};
   var list = document.getElementById('display-card').children[1]
   list.style.setProperty('list-style', 'none', 'important')
