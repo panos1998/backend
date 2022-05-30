@@ -12,10 +12,17 @@ from fastapi.templating import Jinja2Templates
 from fastapi import Request
 
 class patient_metrics(BaseModel):
-    age: int
+    weight: float
     BMI: float
     waist: float
-    vegfruit: int
+    systolic: int
+    diastolic: int
+    oxymetry: int
+    grain: float
+    fruit: float
+    vegan: float
+    dairy: float
+    total_cal: float
     protein: float
     dt: str = ""
     prob:float = 0
@@ -38,13 +45,8 @@ app.add_middleware(
 @app.post("/metrics/")
 async def func_metrics(request: Request,metrics:patient_metrics, Origin:str | None=Header(default=None)):
     print('Origin: ', Origin)
-    print("your age is: ", metrics.age)
-    print("your BMI is: ", metrics.BMI)
-    print("your waist circ is: ", metrics.waist)
-    print("your vegfruit is: ", metrics.vegfruit)
-    print("your protein is: ", metrics.protein)
-    print("we have recieved your test")
-    prob = 0.24
+    print(metrics)
+    prob = 0.7
     metrics.dt = datetime.today().strftime('%d-%m-%Y')
     metrics.prob = prob
     return metrics
