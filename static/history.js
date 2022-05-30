@@ -72,6 +72,12 @@ document.getElementById('delete-history-button').onclick = (event) => {
   localStorage.removeItem('records');
   document.getElementById('footer').style.setProperty('position','relative','important');
 };
+document.getElementById('ip1e').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = 'https://biomedicalapp.herokuapp.com/';
+  }
+};
 document.getElementById('izxo').onclick = (event) => {
   event.preventDefault();
   {
