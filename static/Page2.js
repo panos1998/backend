@@ -80,6 +80,12 @@ function writedata(inputdata){
     localStorage.setItem('records',JSON.stringify(records2))
   }
 };
+document.getElementById('inqw').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = 'https://biomedicalapp.herokuapp.com/';
+  }
+};
 document.getElementById('iwpg').onclick = (event) => {
   event.preventDefault();
   {
