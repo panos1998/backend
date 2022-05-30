@@ -1,11 +1,26 @@
 document.getElementById('staticBackdrop').addEventListener('show.bs.modal',(event)=>{
     console.log('paok')
     var button = event.relatedTarget;
-    var type = button.type;
-    //var modal = document.getElementById('staticBackdrop');
-    document.getElementById('staticBackdropLabel').textContent= button.getAttribute('data-bmi');
+    var details = {"Age": button.getAttribute('data-age'),"BMI":button.getAttribute('data-bmi'),
+    "Waist-circ":button.getAttribute('data-waist'),"Veg-Fruit":button.getAttribute('data-vegfruit'),
+    "Protein":button.getAttribute('data-protein'),"Date":button.getAttribute('data-dt'),
+    "Risk probability":button.getAttribute('data-prob')};
+    var list = document.getElementById('display-card').children[1]
+    list.style.setProperty('list-style', 'none', 'important')
+    var display_card = document.getElementById('display-card');
+    console.log(list);
+    console.log(display_card);
+    for ([key, value] of Object.entries(details)){
+      var list_item = document.createElement('li');
+      list_item.appendChild(document.createTextNode(""+key+": "+value+""));
+      list.appendChild(list_item);
+    }
   }
                                                             )
+  document.getElementById('staticBackdrop').addEventListener('hide.bs.modal', (event)=>{
+    var list = document.getElementById('display-card').children[1]
+    list.innerHTML="";
+  })
   document.getElementById('iy4ml').onclick = (event) => {
     document.getElementById('history-container').style.setProperty('display','inline-block','important');
     document.getElementById('hide-button').style.setProperty('display','inline-block','important');
@@ -43,6 +58,7 @@ document.getElementById('staticBackdrop').addEventListener('show.bs.modal',(even
       container.children[0].remove()
     }
   }
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   document.getElementById('hide-button').onclick = (event) => {
     document.getElementById('history-container').style.setProperty('display','none','important');
   };
