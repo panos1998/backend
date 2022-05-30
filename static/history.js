@@ -69,7 +69,7 @@ document.getElementById('hide-button').onclick = (event) => {
 };
 document.getElementById('delete-history-button').onclick = (event) => {
   document.getElementById('history-container').remove();
-  localStorage.removeItam('records');
+  localStorage.removeItem('records');
   document.getElementById('footer').style.setProperty('position','relative','important');
 };
 document.getElementById('izxo').onclick = (event) => {

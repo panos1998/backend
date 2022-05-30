@@ -101,7 +101,7 @@ document.getElementById('i80i7').onclick = (event) => {
 document.getElementById('navigator-history').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalede.herokuapp.com/history/';
+    window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
   }
 };
 window.onload = () => {
