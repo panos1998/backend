@@ -313,15 +313,15 @@ body{
   margin:0 20px 10px 0 !important;
   border:solid lightgreen !important;
 }
-body{
-  background-color:#a3ced0 !important;
-}
 .btn.btn-primary.pointer.classRule-i1nui-test-History{
   background-color:#f6d900 !important;
 }
 .btn.btn-primary.pointer.classRule-ibifo-test-History{
   background-color:#bddd25 !important;
   border:1px solid #bddd25 !important;
+}
+body{
+  background-color:#a3ced0 !important;
 }
 @media fadeEffect{
   0%{

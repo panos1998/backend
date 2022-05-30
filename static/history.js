@@ -49,6 +49,7 @@ function readlocalstorage(){
           clone.style.setProperty('background-color','lightgreen', 'important');
         }
         else {
+          clone.style.setProperty('border-color', 'coral','important');
           clone.style.setProperty('background-color', 'coral', 'important');
         }
       }
@@ -65,6 +66,11 @@ document.getElementById('hide-button').onclick = (event) => {
 };
 document.getElementById('hide-button').onclick = (event) => {
   document.getElementById('history-container').style.setProperty('display','none','important');
+};
+document.getElementById('delete-history-button').onclick = (event) => {
+  document.getElementById('history-container').remove();
+  localStorage.removeItam('records');
+  document.getElementById('footer').style.setProperty('position','relative','important');
 };
 document.getElementById('izxo').onclick = (event) => {
   event.preventDefault();
