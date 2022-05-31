@@ -1,7 +1,9 @@
 document.getElementById('staticBackdrop').addEventListener('hide.bs.modal', (event)=>{
+    setTimeout(()=>{
     document.getElementById('staticBackdropLabel').textContent="";
     document.getElementById('model-content').innerHTML='';
-    document.getElementById('modal-frame').style.setProperty("background-color","white", 'important');;
+    document.getElementById('modal-frame').style.setProperty("background-color","white", 'important');},300);
+    
   });
 document.getElementById('submit').innerText='Submit';
   const modalbackg = document.getElementById('modal-frame');
