@@ -26,7 +26,7 @@ document.getElementById('i478p').onclick = (event) => {
     label.innertHTML="Your algorithm is loading";
     const modalContent = document.getElementById('model-content');
     modalContent.innerHTML="";
-    if(password=="" || filefield==""){
+    if(password=="" || fileField==""){
       label.innertHTML='Please put a model file and the password';
       modalContent.innerHTML="" ;
     }
