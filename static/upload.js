@@ -1,5 +1,5 @@
 document.getElementById('i478p').onclick = (event) => {
-    onst formData = new FormData();
+    const formData = new FormData();
     const fileField = document.querySelector('input[type="file"]');
     formData.append('file', fileField.files[0]);
     fetch('https://example.com/profile/avatar', {
