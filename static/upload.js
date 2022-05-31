@@ -27,10 +27,11 @@ document.getElementById('i478p').onclick = (event) => {
     const modalContent = document.getElementById('model-content');
     modalContent.innerHTML="";
     if(password=="" || fileField==""){
-      label.innertHTML='Please put a model file and the password';
+      label.textContent='Please put a model file and the password';
       modalContent.innerHTML="" ;
     }
-    else{formData.append('file', fileField.files[0]);
+    else{
+    formData.append('file', fileField.files[0]);
     formData.append('password',password);
     fetch('', {
       method: 'POST',
@@ -40,11 +41,11 @@ document.getElementById('i478p').onclick = (event) => {
       .then(response => response.json())
       .then(result => {
       if(result==200){
-        label.innertHTML="Perfect";
+        label.textContent="Perfect";
         modalContent.innerHTML= "Your model has been successfully uploaded";
       }
       else{
-        label.innertHTML=Error;
+        label.textContent="Error";
         modalContent.innerHTML= "An internal problem has been encountered";
       }
       console.log('Success:', result);
