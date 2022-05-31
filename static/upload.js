@@ -13,7 +13,7 @@ document.getElementById('submit').innerText='Submit';
     console.log(password)
     const fileField = document.querySelector('input[type="file"]');
     const label = document.getElementById('staticBackdropLabel');
-    label.textContent="Your algorithm is loading";
+    
     const modalContent = document.getElementById('model-content');
     modalContent.innerHTML="";
     if(password=="" || fileField==""){
