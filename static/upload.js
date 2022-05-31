@@ -40,7 +40,7 @@ document.getElementById('i478p').onclick = (event) => {
       .then(response => response.json())
       .then(result => {
       if(result==200){
-        label.innertHTML=Perfect;
+        label.innertHTML="Perfect";
         modalContent.innerHTML= "Your model has been successfully uploaded";
       }
       else{
