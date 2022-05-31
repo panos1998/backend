@@ -1,6 +1,4 @@
-document.getElementById('docpicker').onclick = (event) => {
-  console.log("paok");
-};
+
 function calculateSize(img, maxWidth, maxHeight) {
   let width = img.width;
   let height = img.height;
