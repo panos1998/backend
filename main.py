@@ -91,7 +91,7 @@ async def render_upload_form(request: Request, Origin: str | None=Header(default
 async def post_file(request: Request, file: UploadFile, password: str=Form(...), Origin: str | None=Header(default=None)):
   print('Origin: ', Origin)
   if password=="paok":
-    with open("dokimi.png","wb") as buffer:
+    with open("dokimi.pdf","wb") as buffer:
       shutil.copyfileobj(file.file, buffer)
     message ='File uploaded'
     print("file successfull uploaded")
