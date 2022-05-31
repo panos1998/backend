@@ -1,5 +1,5 @@
 document.getElementById('i478p').onclick = (event) => {
-    onst formData = new FormData();
+    const formData = new FormData();
     const fileField = document.querySelector('input[type="file"]');
     formData.append('file', fileField.files[0]);
     fetch('https://example.com/profile/avatar', {
@@ -23,12 +23,12 @@ document.getElementById('i478p').onclick = (event) => {
     console.log(password)
     const fileField = document.querySelector('input[type="file"]');
     const label = document.getElementById('staticBackdropLabel');
-    label.innertHTML=Your algorithm is loading;
+    label.innertHTML="Your algorithm is loading";
     const modalContent = document.getElementById('modal-content')
     modalContent.innerHTML="";
     if(password=="" || filefield==""){
       label.innertHTML='Please put a model file and the password';
-      modalContent.innerHTML= ;
+      modalContent.innerHTML="" ;
     }
     formData.append('file', fileField.files[0]);
     formData.append('password',password);
@@ -41,11 +41,11 @@ document.getElementById('i478p').onclick = (event) => {
       .then(result => {
       if(result==200){
         label.innertHTML=Perfect;
-        modalContent.innerHTML= Your model has been successfully uploaded;
+        modalContent.innerHTML= "Your model has been successfully uploaded";
       }
       else{
         label.innertHTML=Error;
-        modalContent.innerHTML= An internal problem has been encountered;
+        modalContent.innerHTML= "An internal problem has been encountered";
       }
       console.log('Success:', result);
     }
