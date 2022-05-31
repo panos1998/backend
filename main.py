@@ -1,15 +1,14 @@
 from datetime import datetime
 from fastapi import __version__ as fastapi_version
-from typing import Optional
 from pydantic import BaseModel
-from fastapi import FastAPI, Header
+from fastapi import FastAPI, Header, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi import Request
+from fastapi import Request,Response
 
 class patient_metrics(BaseModel):
     weight: float
@@ -28,6 +27,11 @@ class patient_metrics(BaseModel):
     prob:float = 0
     class Config:
       arbitrary_types_allowed = True
+class algorithm_submission_model(BaseModel):
+  username: str
+  file: UploadFile
+
+
 
 templates = Jinja2Templates(directory="templates/html")
 print(fastapi_version)
@@ -75,8 +79,14 @@ async def render_history(request: Request, Origin: str | None=Header(default=Non
   print('Origin: ', Origin)
   return templates.TemplateResponse("history.html", {"request":request})
 @app.get('/upload/', response_class=HTMLResponse)
-async def render_history(request: Request, Origin: str | None=Header(default=None)):
+async def render_upload_form(request: Request, Origin: str | None=Header(default=None)):
   print('Origin: ', Origin)
   return templates.TemplateResponse("UploadAlgo.html", {"request":request})
+
+@app.post('/upload/')
+async def post_file(request: Request,file: UploadFile, Origin: str | None=Header(default=None)):
+  print('Origin: ', Origin)
+  message ='File uploaded'
+  return message
 #ssl_keyfile='./key.pem',
   ## # ssl_certfile='./cert.pem', 
