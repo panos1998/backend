@@ -1,5 +1,5 @@
 document.getElementById('i478p').onclick = (event) => {
-    const formData = new FormData();
+    onst formData = new FormData();
     const fileField = document.querySelector('input[type="file"]');
     formData.append('file', fileField.files[0]);
     fetch('https://example.com/profile/avatar', {
@@ -17,6 +17,8 @@ document.getElementById('i478p').onclick = (event) => {
     }
             );
   };
+  document.getElementById('submit').innerText='Submit';
+  const modalbackg = document.getElementById('modal-frame');
   document.getElementById('submit').onclick = (event) => {
     const formData = new FormData();
     const password = document.getElementsByName('password')[0].value ;
@@ -27,35 +29,38 @@ document.getElementById('i478p').onclick = (event) => {
     const modalContent = document.getElementById('model-content');
     modalContent.innerHTML="";
     if(password=="" || fileField==""){
+      modalbackg.style.setProperty("background-color","#FED8B1", 'important');
       label.textContent='Please put a model file and the password';
       modalContent.innerHTML="" ;
     }
     else{
-    formData.append('file', fileField.files[0]);
-    formData.append('password',password);
-    fetch('', {
-      method: 'POST',
-      body: formData
-    }
-         )
-      .then(response => response.json())
-      .then(result => {
-      if(result==200){
-        label.textContent="Perfect";
-        modalContent.innerHTML= "Your model has been successfully uploaded";
+      formData.append('file', fileField.files[0]);
+      formData.append('password',password);
+      fetch('', {
+        method: 'POST',
+        body: formData
       }
-      else{
-        label.textContent="Error";
-        modalContent.innerHTML= "An internal problem has been encountered";
-      }
-      console.log('Success:', result);
-    }
            )
-      .catch(error => {
-      console.error('Error:', error);
+        .then(response => response.json())
+        .then(result => {
+        if(result==200){
+          modalbackg.style.setProperty("background-color","lightgreen", 'important');
+          label.textContent="Perfect &#x2713;";
+          modalContent.innerHTML= "Your model has been successfully uploaded";
+        }
+        else{
+          modalbackg.style.setProperty("background-color","lightred", 'important');
+          label.textContent="Error";
+          modalContent.innerHTML= "An internal problem has been encountered";
+        }
+        console.log('Success:', result);
+      }
+             )
+        .catch(error => {
+        console.error('Error:', error);
+      }
+              );
     }
-            );}
-    
   };
   function calculateSize(img, maxWidth, maxHeight) {
     let width = img.width;

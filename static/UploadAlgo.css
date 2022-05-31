@@ -270,10 +270,6 @@ body, h1, h2, h3, h4, h5, h6{
 .form-control.classRule-customFile-test-UploadAlgo{
   border:1px solid !important;
 }
-#it5ng{
-  min-height:30px !important;
-  width:auto !important;
-}
 .form-group.flex.classRule-it5ng-test-UploadAlgo{
   justify-content:center !important;
 }
