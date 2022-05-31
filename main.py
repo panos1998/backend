@@ -51,8 +51,8 @@ app.add_middleware(
 )
 
 @app.post("/metrics/")
-async def func_metrics(request: Request,metrics:patient_metrics, Origin:str | None=Header(default=None)):
-    print('Origin: ', Origin)
+async def func_metrics(request: Request,metrics:patient_metrics):
+    
     print(metrics)
     prob = 0.7
     metrics.dt = datetime.today().strftime('%d-%m-%Y')
@@ -60,8 +60,8 @@ async def func_metrics(request: Request,metrics:patient_metrics, Origin:str | No
     return metrics
 
 @app.get("/", response_class= HTMLResponse)
-async def read_root(request: Request, Origin:str | None=Header(default=None)):
-    print('Origin: ', Origin)
+async def read_root(request: Request):
+    print('Origin: ')
     print(fastapi_version)
     print({
   "age": 45,
@@ -74,24 +74,24 @@ async def read_root(request: Request, Origin:str | None=Header(default=None)):
 
 
 @app.get('/assess/', response_class=HTMLResponse)
-async def render_form(request: Request, Origin:str | None=Header(default=None)):
-  print('Origin: ', Origin)
+async def render_form(request: Request):
+  
   return templates.TemplateResponse("Page2.html", {"request": request})
 
 @app.get('/history/', response_class=HTMLResponse)
-async def render_history(request: Request, Origin: str | None=Header(default=None)):
-  print('Origin: ', Origin)
+async def render_history(request: Request):
+  
   return templates.TemplateResponse("history.html", {"request":request})
 @app.get('/upload/', response_class=HTMLResponse)
-async def render_upload_form(request: Request, Origin: str | None=Header(default=None)):
-  print('Origin: ', Origin)
+async def render_upload_form(request: Request):
+  
   return templates.TemplateResponse("UploadAlgo.html", {"request":request})
 
 @app.post('/upload/')
-async def post_file(request: Request, file: UploadFile, password: str=Form(...), Origin: str | None=Header(default=None)):
-  print('Origin: ', Origin)
+async def post_file(request: Request, file: UploadFile, password: str=Form(...)):
+
   if password=="paok":
-    with open("dokimi.pdf","wb") as buffer:
+    with open("dokimi.png","wb") as buffer:
       shutil.copyfileobj(file.file, buffer)
     message ='File uploaded'
     print("file successfull uploaded")
