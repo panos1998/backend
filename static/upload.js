@@ -30,7 +30,7 @@ document.getElementById('i478p').onclick = (event) => {
       label.innertHTML='Please put a model file and the password';
       modalContent.innerHTML="" ;
     }
-    formData.append('file', fileField.files[0]);
+    else{formData.append('file', fileField.files[0]);
     formData.append('password',password);
     fetch('', {
       method: 'POST',
@@ -53,7 +53,8 @@ document.getElementById('i478p').onclick = (event) => {
       .catch(error => {
       console.error('Error:', error);
     }
-            );
+            );}
+    
   };
   function calculateSize(img, maxWidth, maxHeight) {
     let width = img.width;
