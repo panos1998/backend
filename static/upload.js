@@ -1,5 +1,61 @@
-
-function calculateSize(img, maxWidth, maxHeight) {
+document.getElementById('i478p').onclick = (event) => {
+    onst formData = new FormData();
+    const fileField = document.querySelector('input[type="file"]');
+    formData.append('file', fileField.files[0]);
+    fetch('https://example.com/profile/avatar', {
+      method: 'POST',
+      body: formData
+    }
+         )
+      .then(response => response.json())
+      .then(result => {
+      console.log('Success:', result);
+    }
+           )
+      .catch(error => {
+      console.error('Error:', error);
+    }
+            );
+  };
+  document.getElementById('submit').onclick = (event) => {
+    const formData = new FormData();
+    const password = document.getElementsByName('password')[0].value ;
+    console.log(password)
+    const fileField = document.querySelector('input[type="file"]');
+    const label = document.getElementById('staticBackdropLabel');
+    label.innertHTML=Your algorithm is loading;
+    const modalContent = document.getElementById('modal-content')
+    modalContent.innerHTML="";
+    if(password=="" || filefield==""){
+      label.innertHTML='Please put a model file and the password';
+      modalContent.innerHTML= ;
+    }
+    formData.append('file', fileField.files[0]);
+    formData.append('password',password);
+    fetch('', {
+      method: 'POST',
+      body: formData
+    }
+         )
+      .then(response => response.json())
+      .then(result => {
+      if(result==200){
+        label.innertHTML=Perfect;
+        modalContent.innerHTML= Your model has been successfully uploaded;
+      }
+      else{
+        label.innertHTML=Error;
+        modalContent.innerHTML= An internal problem has been encountered;
+      }
+      console.log('Success:', result);
+    }
+           )
+      .catch(error => {
+      console.error('Error:', error);
+    }
+            );
+  };
+  function calculateSize(img, maxWidth, maxHeight) {
     let width = img.width;
     let height = img.height;
     // calculate the width and height, constraining the proportions
@@ -30,7 +86,7 @@ function calculateSize(img, maxWidth, maxHeight) {
     }
                       );
   };
-  document.getElementById('iwnko').addEventListener("change", async(e) => {
+  document.getElementById('customFile').addEventListener("change", async(e) => {
     const MAX_WIDTH = 300;
     const MAX_HEIGHT = 300;
     const MIME_TYPE = "image/jpeg";
@@ -56,10 +112,10 @@ function calculateSize(img, maxWidth, maxHeight) {
         async (blob) => {
           const base64 = await convertBase64(blob);
           document
-            .getElementById('iwnko')
+            .getElementById('customFile')
             .setAttribute("data-image-base64", base64);
           document
-            .getElementById('iwnko')
+            .getElementById('customFile')
             .setAttribute("name", e.target.files[0].name);
         }
         ,
@@ -68,7 +124,7 @@ function calculateSize(img, maxWidth, maxHeight) {
       );
     };
   }
-                                                   );
+                                                        );
   window.onload = () => {
   };
   

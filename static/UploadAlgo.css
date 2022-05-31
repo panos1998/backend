@@ -226,6 +226,24 @@ body, h1, h2, h3, h4, h5, h6{
   margin:600px 0 0 !important;
   position:relative !important;
 }
+.modal-header.classRule-it6aq-test-History{
+  padding:5px 0 0 0 !important;
+  display:flex !important;
+}
+.btn-close.classRule-i9a2p-test-History{
+  margin:-7.5px -7.5px -7.5px 349.469px !important;
+  padding:7.5px 7.5px 7.5px 7.5px !important;
+}
+.modal-content.classRule-i073-test-modal{
+  display:block !important;
+  flex-direction:row !important;
+  padding:0 10px 0 10px !important;
+  border:0 solid rgba(0, 0, 0, 0.2) !important;
+}
+.btn.btn-primary.classRule-ik9wm-test-History{
+  margin:0 20px 10px 0 !important;
+  border:solid lightgreen !important;
+}
 .btn.btn-primary.pointer.classRule-i1nui-test-History{
   background-color:#f6d900 !important;
 }
@@ -240,11 +258,45 @@ body, h1, h2, h3, h4, h5, h6{
   width:91px !important;
   height:91px !important;
 }
-#i9g0g{
+.form-group.flex.classRule-i9g0g-test-UploadAlgo{
+  justify-content:center !important;
+}
+.flex.classRule-ivc2d-test-UploadAlgo{
+  justify-content:center !important;
+}
+.form-label.classRule-ifap6-test-UploadAlgo{
+  margin:0 0 7.5px 2px !important;
+}
+.form-control.classRule-customFile-test-UploadAlgo{
+  border:1px solid !important;
+}
+#it5ng{
   min-height:30px !important;
   width:auto !important;
 }
-.form-group.flex.classRule-i9g0g-test-UploadAlgo{
+.form-group.flex.classRule-it5ng-test-UploadAlgo{
+  justify-content:center !important;
+}
+#i0rf5{
+  min-height:30px !important;
+  width:auto !important;
+}
+.col-form-label.classRule-intw5-test-UploadAlgo{
+  background-color:rgba(124,121,121,0.15) !important;
+  text-align:center !important;
+  color:#000000 !important;
+  padding:5.625px 11.25px 5.625px 11.25px !important;
+  width:189px !important;
+}
+.form-group.flex.classRule-i0rf5-test-UploadAlgo{
+  border:1px solid rgb(0, 0, 0) !important;
+  margin:6px 0 15px 0 !important;
+}
+#isi66{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-isi66-test-UploadAlgo{
   justify-content:center !important;
 }
 @media fadeEffect{

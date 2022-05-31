@@ -1,14 +1,18 @@
+from http.client import HTTPResponse
+import shutil
 from datetime import datetime
-from fastapi import __version__ as fastapi_version
+from fastapi import __version__ as fastapi_version, Form
 from pydantic import BaseModel
-from fastapi import FastAPI, Header, File, UploadFile
+from fastapi import FastAPI, Header, UploadFile, status
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi import Request,Response
+from fastapi import Request
+from fastapi.responses import JSONResponse
+
 
 class patient_metrics(BaseModel):
     weight: float
@@ -84,9 +88,15 @@ async def render_upload_form(request: Request, Origin: str | None=Header(default
   return templates.TemplateResponse("UploadAlgo.html", {"request":request})
 
 @app.post('/upload/')
-async def post_file(request: Request,algorithm_file: UploadFile, Origin: str | None=Header(default=None)):
+async def post_file(request: Request, file: UploadFile, password: str=Form(...), Origin: str | None=Header(default=None)):
   print('Origin: ', Origin)
-  message ='File uploaded'
-  return message
+  if password=="paok":
+    with open("dokimi.png","wb") as buffer:
+      shutil.copyfileobj(file.file, buffer)
+    message ='File uploaded'
+    print("file successfull uploaded")
+    return 200
+  else:
+    return 401
 #ssl_keyfile='./key.pem',
   ## # ssl_certfile='./cert.pem', 
