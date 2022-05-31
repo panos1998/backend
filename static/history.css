@@ -323,6 +323,9 @@ body{
 body{
   background-color:#a3ced0 !important;
 }
+.classRule-iedhh-test-History{
+  background-color:#a3ced0 !important;
+}
 @media fadeEffect{
   0%{
     opacity:0;
