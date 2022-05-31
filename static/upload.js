@@ -25,14 +25,16 @@
         .then(response => response.json())
         .then(result => {
         if(result==200){
-          modalbackg.style.setProperty("background-color","lightgreen", 'important');
-          label.textContent="Perfect &#x2713;";
+          label.textContent="&#x2713; Perfect";
           modalContent.innerHTML= "Your model has been successfully uploaded";
+          modalbackg.style.setProperty("background-color","lightgreen", 'important');
+          
         }
         else{
-          modalbackg.style.setProperty("background-color","lightred", 'important');
           label.textContent="Error";
           modalContent.innerHTML= "An internal problem has been encountered";
+          modalbackg.style.setProperty("background-color","lightred", 'important');
+          
         }
         console.log('Success:', result);
       }
