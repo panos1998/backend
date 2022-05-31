@@ -32,7 +32,7 @@
           
         }
         else{
-          modalbackg.style.setProperty("background-color","lightred", 'important');
+          modalbackg.style.setProperty("background-color","coral", 'important');
           label.textContent="Error";
           modalContent.innerHTML= "An internal problem has been encountered";
         }
