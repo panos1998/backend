@@ -84,7 +84,7 @@ async def render_upload_form(request: Request, Origin: str | None=Header(default
   return templates.TemplateResponse("UploadAlgo.html", {"request":request})
 
 @app.post('/upload/')
-async def post_file(request: Request,file: UploadFile, Origin: str | None=Header(default=None)):
+async def post_file(request: Request,algorithm_file: UploadFile, Origin: str | None=Header(default=None)):
   print('Origin: ', Origin)
   message ='File uploaded'
   return message
