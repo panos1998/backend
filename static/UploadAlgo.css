@@ -13,6 +13,11 @@
 .table-stripped2 th:not(:last-child){
   border-right:3px solid white !important;
 }
+.sticky-footer{
+  position:fixed !important;
+  bottom:0 !important;
+  width:100% !important;
+}
 .form-check .form-check-input{
   display:inline-block !important;
   margin-top:0.25vw !important;
@@ -264,9 +269,6 @@ body, h1, h2, h3, h4, h5, h6{
 .flex.classRule-ivc2d-test-UploadAlgo{
   justify-content:center !important;
 }
-.form-label.classRule-ifap6-test-UploadAlgo{
-  margin:0 0 7.5px 2px !important;
-}
 .form-control.classRule-customFile-test-UploadAlgo{
   border:1px solid !important;
 }
@@ -278,9 +280,8 @@ body, h1, h2, h3, h4, h5, h6{
   width:auto !important;
 }
 .col-form-label.classRule-intw5-test-UploadAlgo{
-  background-color:rgba(124,121,121,0.15) !important;
+  background-color:#e9e9e9 !important;
   text-align:center !important;
-  color:#000000 !important;
   padding:5.625px 11.25px 5.625px 11.25px !important;
   width:189px !important;
 }
@@ -294,6 +295,30 @@ body, h1, h2, h3, h4, h5, h6{
 }
 .form-group.flex.classRule-isi66-test-UploadAlgo{
   justify-content:center !important;
+}
+body{
+  background-color:#a3ced0 !important;
+}
+#i5rd8{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-i5rd8-test-UploadAlgo{
+  justify-content:center !important;
+}
+#i2ln1{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-i2ln1-test-UploadAlgo{
+  justify-content:center !important;
+  max-width:100% !important;
+}
+#i22tn{
+  color:black !important;
+}
+.pointer.classRule-i22tn-test-UploadAlgo{
+  max-width:100% !important;
 }
 @media fadeEffect{
   0%{

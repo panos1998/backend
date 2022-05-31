@@ -1,11 +1,11 @@
 document.getElementById('staticBackdrop').addEventListener('hide.bs.modal', (event)=>{
     setTimeout(()=>{
-    document.getElementById('staticBackdropLabel').textContent="";
-    document.getElementById('model-content').innerHTML='';
-    document.getElementById('modal-frame').style.setProperty("background-color","white", 'important');},300);
-    
+      document.getElementById('staticBackdropLabel').textContent="";
+      document.getElementById('model-content').innerHTML='';
+      document.getElementById('modal-frame').style.setProperty("background-color","white", 'important');
+    },300);
   });
-document.getElementById('submit').innerText='Submit';
+  document.getElementById('submit').innerText='Submit';
   const modalbackg = document.getElementById('modal-frame');
   document.getElementById('submit').onclick = (event) => {
     const formData = new FormData();
@@ -13,7 +13,6 @@ document.getElementById('submit').innerText='Submit';
     console.log(password)
     const fileField = document.querySelector('input[type="file"]');
     const label = document.getElementById('staticBackdropLabel');
-    
     const modalContent = document.getElementById('model-content');
     modalContent.innerHTML="";
     if(password=="" || fileField==""){
@@ -32,11 +31,9 @@ document.getElementById('submit').innerText='Submit';
         .then(response => response.json())
         .then(result => {
         if(result==200){
-         
           modalbackg.style.setProperty("background-color","lightgreen", 'important');
           label.textContent="\u2705 Perfect";
           modalContent.innerHTML= "Your model has been successfully uploaded";
-          
         }
         else{
           modalbackg.style.setProperty("background-color","coral", 'important');
@@ -50,6 +47,36 @@ document.getElementById('submit').innerText='Submit';
         console.error('Error:', error);
       }
               );
+    }
+  };
+  document.getElementById('i5bp').onclick = (event) => {
+    event.preventDefault();
+    {
+      window.document.location = 'https://biomedicalapp.herokuapp.com/';
+    }
+  };
+  document.getElementById('i7rd').onclick = (event) => {
+    event.preventDefault();
+    {
+      window.document.location = 'https://biomedicalapp.herokuapp.com/';
+    }
+  };
+  document.getElementById('ivg8u').onclick = (event) => {
+    event.preventDefault();
+    {
+      window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
+    }
+  };
+  document.getElementById('it8tt').onclick = (event) => {
+    event.preventDefault();
+    {
+      window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+    }
+  };
+  document.getElementById('idvzt').onclick = (event) => {
+    event.preventDefault();
+    {
+      window.document.location = 'https://biomedicalapp.herokuapp.com/upload/';
     }
   };
   function calculateSize(img, maxWidth, maxHeight) {
