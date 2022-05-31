@@ -24,7 +24,7 @@ document.getElementById('i478p').onclick = (event) => {
     const fileField = document.querySelector('input[type="file"]');
     const label = document.getElementById('staticBackdropLabel');
     label.innertHTML="Your algorithm is loading";
-    const modalContent = document.getElementById('modal-content')
+    const modalContent = document.getElementById('model-content');
     modalContent.innerHTML="";
     if(password=="" || filefield==""){
       label.innertHTML='Please put a model file and the password';
