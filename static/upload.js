@@ -1,4 +1,9 @@
-  document.getElementById('submit').innerText='Submit';
+document.getElementById('staticBackdrop').addEventListener('hide.bs.modal', (event)=>{
+    document.getElementById('staticBackdropLabel').textContent="";
+    document.getElementById('model-content').innerHTML='';
+    document.getElementById('modal-frame').style.setProperty("background-color","white", 'important');;
+  });
+document.getElementById('submit').innerText='Submit';
   const modalbackg = document.getElementById('modal-frame');
   document.getElementById('submit').onclick = (event) => {
     const formData = new FormData();
