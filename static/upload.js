@@ -1,4 +1,4 @@
-document.getElementById('i478p').onclick = (event) => {
+document.getElementById('submit').onclick = (event) => {
     const formData = new FormData();
     const fileField = document.querySelector('input[type="file"]');
     formData.append('file', fileField.files[0]);
