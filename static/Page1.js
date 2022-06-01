@@ -22,6 +22,12 @@ document.getElementById('itltu').onclick = (event) => {
 	  window.document.location = '/history/';
 	}
   };
+  document.getElementById('iitnl').onclick = (event) => {
+	event.preventDefault();
+	{
+	  window.document.location = '/upload/';
+	}
+  };
   document.getElementById('i3lp3').onclick = (event) => {
 	event.preventDefault();
 	{
@@ -31,37 +37,37 @@ document.getElementById('itltu').onclick = (event) => {
   document.getElementById('ijlzf').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
+	  window.document.location = '/assess/';
 	}
   };
   document.getElementById('if7cc').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
+	  window.document.location = '/assess/';
 	}
   };
   document.getElementById('id4q1').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
+	  window.document.location = '/assess/';
 	}
   };
   document.getElementById('i3lrp').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+	  window.document.location = '/history/';
 	}
   };
   document.getElementById('i880j').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+	  window.document.location = '/history/';
 	}
   };
   document.getElementById('icl9l').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+	  window.document.location = '/history/';
 	}
   };
   window.onload = () => {
