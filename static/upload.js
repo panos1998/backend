@@ -75,6 +75,12 @@ document.getElementById('it8tt').onclick = (event) => {
     window.document.location = '/history/';
   }
 };
+document.getElementById('ii4xs').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = '/upload/';
+  }
+};
 document.getElementById('idvzt').onclick = (event) => {
   event.preventDefault();
   {
