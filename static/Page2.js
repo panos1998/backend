@@ -101,25 +101,37 @@ function writedata(inputdata){
 document.getElementById('inqw').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/';
+    window.document.location = '/';
   }
 };
 document.getElementById('iwpg').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/';
+    window.document.location = '/';
   }
 };
 document.getElementById('iszlx').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
+    window.document.location = '/assess/';
   }
 };
 document.getElementById('i80i7').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+    window.document.location = '/history/';
+  }
+};
+document.getElementById('iuxzo').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = '/upload/';
+  }
+};
+document.getElementById('issvr').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = '/upload/';
   }
 };
 document.getElementById('i6pnoz').onclick = (event) => {
