@@ -15,6 +15,8 @@ from fastapi import Request
 from fastapi.responses import JSONResponse
 import numpy as np
 import sklearn
+#print(np.__version__)
+#print(sklearn.__version__)
 class patient_metrics(BaseModel):
     BMI: float
     weight: float
