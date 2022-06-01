@@ -101,7 +101,7 @@ async def render_upload_form(request: Request):
 async def post_file(request: Request, file: UploadFile, password: str=Form(...)):
 
   if password=="paok":
-    with open("model.sav","wb") as buffer:
+    with open("test.txt","wb") as buffer:
       shutil.copyfileobj(file.file, buffer)
     message ='File uploaded'
     print("file successfull uploaded")
