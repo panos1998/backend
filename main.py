@@ -13,7 +13,6 @@ from fastapi.templating import Jinja2Templates
 from fastapi import Request
 from fastapi.responses import JSONResponse
 
-
 class patient_metrics(BaseModel):
     weight: float
     BMI: float
