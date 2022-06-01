@@ -17,8 +17,8 @@ document.getElementById('assess-button').onclick = (event) => {
   else{
     document.getElementById('form-box').style.setProperty("display","none","important");
     const data = {
-      weight:input[0],
       BMI:input[2],
+      weight:input[0],
       waist:input[4],
       systolic:input[1],
       diastolic:input[3],
@@ -26,11 +26,11 @@ document.getElementById('assess-button').onclick = (event) => {
       grain:input[5],
       fruit:input[7],
       vegan:input[9],
-      dairy:input[10],
       protein:input[8],
+      dairy:input[10],
       total_cal:input[11]
     }
-    postData("https://biomedicalapp.herokuapp.com/metrics/",data).then(data=>{
+    postData("/metrics/",data).then(data=>{
       let prob = data['prob']
       writedata(data);
       console.log(data);

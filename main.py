@@ -1,5 +1,6 @@
 from http.client import HTTPResponse
 import shutil
+import pickle
 from datetime import datetime
 from fastapi import __version__ as fastapi_version, Form
 from pydantic import BaseModel
@@ -12,10 +13,11 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Request
 from fastapi.responses import JSONResponse
-
+import numpy as np
+import sklearn
 class patient_metrics(BaseModel):
-    weight: float
     BMI: float
+    weight: float
     waist: float
     systolic: int
     diastolic: int
@@ -23,9 +25,9 @@ class patient_metrics(BaseModel):
     grain: float
     fruit: float
     vegan: float
+    protein: float
     dairy: float
     total_cal: float
-    protein: float
     dt: str = ""
     prob:float = 0
     class Config:
@@ -51,11 +53,18 @@ app.add_middleware(
 
 @app.post("/metrics/")
 async def func_metrics(request: Request,metrics:patient_metrics):
-    
-    print(metrics)
-    prob = 0.7
+    loaded_model = pickle.load(open('model.sav', 'rb'))
+    metrics_dict = metrics.dict()
+    print(metrics_dict)
+    x_test = [value for value in metrics_dict.values()]
+    print(x_test)
+    x_test = np.array(x_test[:-2]).reshape(1,-1)
+    print(x_test)
+    result = loaded_model.predict_proba(x_test)[0][1]
+    print(result)
+    metrics.prob = np.around(result,decimals=4)
     metrics.dt = datetime.today().strftime('%d-%m-%Y')
-    metrics.prob = prob
+    #print(metrics)
     return metrics
 
 @app.get("/", response_class= HTMLResponse)
@@ -90,7 +99,7 @@ async def render_upload_form(request: Request):
 async def post_file(request: Request, file: UploadFile, password: str=Form(...)):
 
   if password=="paok":
-    with open("dokimi.png","wb") as buffer:
+    with open("model.sav","wb") as buffer:
       shutil.copyfileobj(file.file, buffer)
     message ='File uploaded'
     print("file successfull uploaded")
