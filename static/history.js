@@ -116,6 +116,12 @@ document.getElementById('i5z9m').onclick = (event) => {
     window.document.location = '/history/';
   }
 };
+document.getElementById('ijxfk').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = '/upload/';
+  }
+};
 document.getElementById('i04p6').onclick = (event) => {
   event.preventDefault();
   {
