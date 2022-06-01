@@ -40,7 +40,7 @@ document.getElementById('assess-button').onclick = (event) => {
       total_cal:input[11]
     }
     //send data for machine learning through http POST request at appropriate endpoint
-    postData("https://biomedicalapp.herokuapp.com/metrics/",data).then(data=>{
+    postData("/metrics/",data).then(data=>{
       let prob = data['prob']//the calculated diabetes risk probability
       writedata(data);
       //save data to localStorage
