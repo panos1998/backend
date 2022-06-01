@@ -329,8 +329,9 @@ body{
   width:auto !important;
 }
 .form-group.flex.classRule-ia7dv-test-History{
-  justify-content:center !important;
   background-color:#a3ced0 !important;
+  justify-content:center !important;
+  text-align:center !important;
 }
 body{
   background-color:#a3ced0 !important;
