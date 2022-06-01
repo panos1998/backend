@@ -336,6 +336,9 @@ body{
 .form-group.flex.classRule-idpelj-test-Assess{
   justify-content:center !important;
 }
+.btn.btn-primary.classRule-incvnp-test-Assess.pointer{
+  border-radius:19.75px !important;
+}
 @media fadeEffect{
   0%{
     opacity:0;

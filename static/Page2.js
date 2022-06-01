@@ -1,3 +1,4 @@
+document.getElementById('assess-button').textContent='Assess';
 document.getElementById('assess-button').onclick = (event) => {
   //get the input variables of the form
   var input = [document.getElementsByName('weight')[0].value, document.getElementsByName('systolic')[0].value, document.getElementsByName('bmi')[0].value,document.getElementsByName("diastolic")[0].value, document.getElementsByName('waist')[0].value,  document.getElementsByName('grain')[0].value,  document.getElementsByName('oximetry')[0].value, document.getElementsByName('fruits')[0].value,  document.getElementsByName('protein')[0].value,  document.getElementsByName('vegetables')[0].value,  document.getElementsByName('dairy')[0].value, document.getElementsByName('calories')[0].value];
@@ -40,7 +41,7 @@ document.getElementById('assess-button').onclick = (event) => {
       total_cal:input[11]
     }
     //send data for machine learning through http POST request at appropriate endpoint
-    postData("/metrics/",data).then(data=>{
+    postData("https://biomedicalapp.herokuapp.com/metrics/",data).then(data=>{
       let prob = data['prob']//the calculated diabetes risk probability
       writedata(data);
       //save data to localStorage
