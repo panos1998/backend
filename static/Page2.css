@@ -280,25 +280,11 @@ body, h1, h2, h3, h4, h5, h6{
   margin:0 0 0 0 !important;
   border-radius:19.75px !important;
 }
-#button-box{
-  min-height:30px !important;
-  width:auto !important;
-}
 .form-group.flex.classRule-i16y5t-test-Page4{
   justify-content:center !important;
 }
 .btn.btn-primary.pointer.classRule-ik6h96-test-Page4{
   border-radius:19.75px !important;
-}
-.classRule-i2ebco-test-Page4{
-  margin:0 0 130px 0 !important;
-}
-#results-box{
-  min-height:30px !important;
-  width:auto !important;
-}
-#is286t{
-  width:18rem !important;
 }
 .navbar-brand.classRule-inqw-test-Page4{
   width:91px !important;
@@ -310,18 +296,9 @@ body, h1, h2, h3, h4, h5, h6{
 .dropdown-menu.classRule-i6ugi-test-Page4{
   margin:1.875px 0 0 -70px !important;
 }
-.card-body.classRule-iss2g7-test-Page4{
-  justify-content:center !important;
-}
 .form-group.flex.classRule-if8eps-test-Page4{
+  background-color:#a3ced0 !important;
   justify-content:center !important;
-}
-body{
-  background-color:#a3ced0 !important;
-}
-.card.classRule-is286t-test-Page4{
-  background-color:#a3ced0 !important;
-  border:0 solid rgba(0, 0, 0, 0.125) !important;
 }
 #ioxehd{
   min-height:30px !important;
@@ -337,6 +314,27 @@ body{
   justify-content:center !important;
   max-width:100% !important;
   width:100% !important;
+}
+#ipflaj{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-ipflaj-test-Assess{
+  justify-content:center !important;
+  background-color:#a3ced0 !important;
+}
+.classRule-im2v7-test-Page4{
+  background-color:#a3ced0 !important;
+}
+body{
+  background-color:#a3ced0 !important;
+}
+#idpelj{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-idpelj-test-Assess{
+  justify-content:center !important;
 }
 @media fadeEffect{
   0%{

@@ -1,24 +1,33 @@
-document.getElementById('results-card').style.setProperty("display","none","important");
 document.getElementById('assess-button').onclick = (event) => {
+  //get the input variables of the form
   var input = [document.getElementsByName('weight')[0].value, document.getElementsByName('systolic')[0].value, document.getElementsByName('bmi')[0].value,document.getElementsByName("diastolic")[0].value, document.getElementsByName('waist')[0].value,  document.getElementsByName('grain')[0].value,  document.getElementsByName('oximetry')[0].value, document.getElementsByName('fruits')[0].value,  document.getElementsByName('protein')[0].value,  document.getElementsByName('vegetables')[0].value,  document.getElementsByName('dairy')[0].value, document.getElementsByName('calories')[0].value];
   let hasNegative = input.some(value=> value<0);
+  //check for negative values
   let hasNull = input.some(value=> value=="");
+  //check for empty values
   console.log(input)
   if(hasNegative){
-    document.getElementById('results-text').innerHTML="Please don't give negative values"
-    document.getElementById('results-card').style.setProperty("display","block","important");
-    document.getElementById('results-card').style.setProperty('background-color','Khaki',"important");
+    //case negative value detected, create some graphics and present a warning message
+    document.getElementById('staticBackdropLabel').textContent="Op!";
+    document.getElementById('modal-content').textContent="Please insert positive values";
+    document.getElementById('modal-body').style.setProperty('background-color','Khaki',"important");
   }
   else if(hasNull){
-    document.getElementById('results-text').innerHTML="Please fill all fields"
-    document.getElementById('results-card').style.setProperty("display","block","important");
-    document.getElementById('results-card').style.setProperty('background-color','Khaki',"important");
+    // case empty value detected, create some graphics and present a warning message
+    document.getElementById('staticBackdropLabel').textContent="Huh!"
+    document.getElementById('modal-content').textContent="You may have forgotten to fill some inputs"
+    document.getElementById('modal-body').style.setProperty('background-color','Khaki',"important");
   }
   else{
-    document.getElementById('form-box').style.setProperty("display","none","important");
+    //case everything is ok hide the form body
+    //document.getElementById('form-box').style.setProperty("display","none","important");
+    //save input data into data dictionary-javascript object
+    document.getElementById('staticBackdropLabel').textContent="\u2705 Perfect!"
+    document.getElementById('modal-content').textContent="Your results will be available right there very soon"
+    document.getElementById('modal-body').style.setProperty('background-color','Violet',"important");
     const data = {
-      BMI:input[2],
       weight:input[0],
+      BMI:input[2],
       waist:input[4],
       systolic:input[1],
       diastolic:input[3],
@@ -26,24 +35,32 @@ document.getElementById('assess-button').onclick = (event) => {
       grain:input[5],
       fruit:input[7],
       vegan:input[9],
-      protein:input[8],
       dairy:input[10],
+      protein:input[8],
       total_cal:input[11]
     }
-    postData("/metrics/",data).then(data=>{
-      let prob = data['prob']
+    //send data for machine learning through http POST request at appropriate endpoint
+    postData("https://biomedicalapp.herokuapp.com/metrics/",data).then(data=>{
+      let prob = data['prob']//the calculated diabetes risk probability
       writedata(data);
+      //save data to localStorage
       console.log(data);
-      const color = prob<0.5 ? 'lightgreen':'coral';
-      document.getElementById('assess-button').style.setProperty('display','none','important');
-      document.getElementById('results-card').style.setProperty('display','block','important');
-      document.getElementById('footer').style.setProperty('position','fixed','important');
-      document.getElementById('results-card').style.setProperty('background-color',color,'important');
-      document.getElementById('results-text').innerHTML='Your risk probability is'+" "+prob+"";
+      const color = prob<0.5 ? 'MediumSeaGreen':'coral';
+      const resultsMessage = prob<0.5 ? "Keep having a healthy lifestyle": "You should consider making a health checkup";
+      //background color for some graphics depending on prob result
+      // hide assess button
+      //footer to fixed for better presentation
+      //no need after modal
+      //document.getElementById('results-card').style.setProperty('background-color',color,'important');
+      //background color of results card
+      document.getElementById('modal-body').style.setProperty("background-color", color, "important")
+      document.getElementById('modal-content').textContent='Your risk probability is'+" "+prob+". "+resultsMessage+"";
+      //put a message with calculated prob into card
     }
                                                                       );
   }
 };
+// postData function from https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 async function postData(url = '', data = {
 }
                         ) {
@@ -66,6 +83,7 @@ async function postData(url = '', data = {
   return response.json();
   // parses JSON response into native JavaScript objects
 }
+//save details of metric to localStorage
 function writedata(inputdata){
   if (localStorage.getItem('records')===null){
     console.log('ksekiniste  tora tin dokimi sas')
@@ -104,10 +122,10 @@ document.getElementById('i80i7').onclick = (event) => {
     window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
   }
 };
-document.getElementById('navigator-history').onclick = (event) => {
+document.getElementById('i6pnoz').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+    window.document.location = '/history/';
   }
 };
 window.onload = () => {
