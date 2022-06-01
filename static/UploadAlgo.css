@@ -296,15 +296,13 @@ body, h1, h2, h3, h4, h5, h6{
 .form-group.flex.classRule-isi66-test-UploadAlgo{
   justify-content:center !important;
 }
-body{
-  background-color:#a3ced0 !important;
-}
 #i5rd8{
   min-height:30px !important;
   width:auto !important;
 }
 .form-group.flex.classRule-i5rd8-test-UploadAlgo{
   justify-content:center !important;
+  background-color:#a3ced0 !important;
 }
 #i2ln1{
   min-height:30px !important;
@@ -319,6 +317,9 @@ body{
 }
 .pointer.classRule-i22tn-test-UploadAlgo{
   max-width:100% !important;
+}
+body{
+  background-color:#a3ced0 !important;
 }
 @media fadeEffect{
   0%{

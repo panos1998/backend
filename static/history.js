@@ -95,25 +95,31 @@ document.getElementById('delete-history-button').onclick = (event) => {
 document.getElementById('ip1e').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/';
+    window.document.location = '/';
   }
 };
 document.getElementById('izxo').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/';
+    window.document.location = '/';
   }
 };
 document.getElementById('itked').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
+    window.document.location = '/assess/';
   }
 };
 document.getElementById('i5z9m').onclick = (event) => {
   event.preventDefault();
   {
-    window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+    window.document.location = '/history/';
+  }
+};
+document.getElementById('i04p6').onclick = (event) => {
+  event.preventDefault();
+  {
+    window.document.location = '/upload/';
   }
 };
 window.onload = () => {

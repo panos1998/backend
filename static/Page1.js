@@ -1,25 +1,31 @@
 document.getElementById('itltu').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/';
+	  window.document.location = '/';
 	}
   };
   document.getElementById('iil9f').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/';
+	  window.document.location = '/';
 	}
   };
   document.getElementById('ik25u').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/assess';
+	  window.document.location = '/assess/';
 	}
   };
   document.getElementById('ixo4v').onclick = (event) => {
 	event.preventDefault();
 	{
-	  window.document.location = 'https://biomedicalapp.herokuapp.com/history/';
+	  window.document.location = '/history/';
+	}
+  };
+  document.getElementById('i3lp3').onclick = (event) => {
+	event.preventDefault();
+	{
+	  window.document.location = '/upload/';
 	}
   };
   document.getElementById('ijlzf').onclick = (event) => {

@@ -304,6 +304,7 @@ body{
   display:block !important;
   flex-direction:row !important;
   padding:0 10px 0 10px !important;
+  border:0 solid rgba(0, 0, 0, 0.2) !important;
 }
 #i3cev{
   min-height:30px !important;
@@ -320,10 +321,18 @@ body{
   background-color:#bddd25 !important;
   border:1px solid #bddd25 !important;
 }
-body{
+.classRule-iedhh-test-History{
   background-color:#a3ced0 !important;
 }
-.classRule-iedhh-test-History{
+#ia7dv{
+  min-height:30px !important;
+  width:auto !important;
+}
+.form-group.flex.classRule-ia7dv-test-History{
+  justify-content:center !important;
+  background-color:#a3ced0 !important;
+}
+body{
   background-color:#a3ced0 !important;
 }
 @media fadeEffect{
