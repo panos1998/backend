@@ -295,17 +295,12 @@ body, h1, h2, h3, h4, h5, h6{
   padding:5.625px 11.25px 5.625px 11.25px !important;
   width:190px !important;
 }
-.form-group.flex.classRule-i0rf5-test-UploadAlgo{
-  margin:6px 0 15px 0 !important;
-  width:30% !important;
-}
 #isi66{
   min-height:30px !important;
   width:auto !important;
 }
 .form-group.flex.classRule-isi66-test-UploadAlgo{
   justify-content:center !important;
-  margin:20px 0 15px 0 !important;
 }
 #i5rd8{
   min-height:30px !important;
@@ -341,9 +336,6 @@ body, h1, h2, h3, h4, h5, h6{
 }
 body{
   background-color:#a3ced0 !important;
-}
-.btn.btn-primary.classRule-iuic2-test-UploadAlgo.pointer{
-  margin:20px 0 0 0 !important;
 }
 @media fadeEffect{
   0%{
@@ -387,6 +379,9 @@ body{
   }
   .pointer.classRule-id4q1-test-Page2.classRule-id4q1-test-Page1{
     margin:0 32px 0 !important;
+  }
+  .form-group.flex.classRule-isi66-test-UploadAlgo{
+    padding:50px 0 0 0 !important;
   }
 }
 @media (max-width: 768px){
