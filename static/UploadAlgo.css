@@ -282,9 +282,6 @@ body, h1, h2, h3, h4, h5, h6{
 .flex.classRule-ivc2d-test-UploadAlgo{
   justify-content:center !important;
 }
-.form-control.classRule-customFile-test-UploadAlgo{
-  width:44.95% !important;
-}
 .form-group.flex.classRule-it5ng-test-UploadAlgo{
   justify-content:center !important;
 }
@@ -296,6 +293,7 @@ body, h1, h2, h3, h4, h5, h6{
   background-color:#e9e9e9 !important;
   text-align:center !important;
   padding:5.625px 11.25px 5.625px 11.25px !important;
+  width:190px !important;
 }
 .form-group.flex.classRule-i0rf5-test-UploadAlgo{
   margin:6px 0 15px 0 !important;
@@ -331,16 +329,21 @@ body, h1, h2, h3, h4, h5, h6{
 .pointer.classRule-i22tn-test-UploadAlgo{
   max-width:100% !important;
 }
-body{
-  background-color:#a3ced0 !important;
-}
 #iny18{
   min-height:30px !important;
   width:auto !important;
 }
 .form-control.classRule-ika54-test-UploadAlgo{
-  width:30% !important;
   border-radius:3.75px 3px !important 3px !important 19px;
+}
+.classRule-igjv5-test-UploadAlgo{
+  background-color:#a3ced0 !important;
+}
+body{
+  background-color:#a3ced0 !important;
+}
+.btn.btn-primary.classRule-iuic2-test-UploadAlgo.pointer{
+  margin:20px 0 0 0 !important;
 }
 @media fadeEffect{
   0%{
