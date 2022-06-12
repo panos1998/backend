@@ -230,14 +230,6 @@ body, h1, h2, h3, h4, h5, h6{
 .col-form-label.classRule-iugn4-test-Page4{
   width:100px !important;
 }
-#i0rc6{
-  min-height:30px !important;
-  width:auto !important;
-}
-#inci1{
-  min-height:30px !important;
-  width:auto !important;
-}
 #i56dk{
   min-height:30px !important;
   width:auto !important;
@@ -326,9 +318,6 @@ body, h1, h2, h3, h4, h5, h6{
 .classRule-im2v7-test-Page4{
   background-color:#a3ced0 !important;
 }
-body{
-  background-color:#a3ced0 !important;
-}
 #idpelj{
   min-height:30px !important;
   width:auto !important;
@@ -338,6 +327,13 @@ body{
 }
 .btn.btn-primary.classRule-incvnp-test-Assess.pointer{
   border-radius:19.75px !important;
+}
+.classRule-ipfjvj-test-Assess{
+  background-color:#a3ced0 !important;
+}
+.classRule-ix9tq2-diaTool-Assess{
+  padding:0 0 0 0 !important;
+  background-color:#a3ced0 !important;
 }
 @media fadeEffect{
   0%{
