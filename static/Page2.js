@@ -39,13 +39,13 @@ document.getElementById('assess-button').onclick = (event) => {
       total_cal:input[9]
     }
     //send data for machine learning through http POST request at appropriate endpoint
-    postData("https://biomedicalapp.herokuapp.com/metrics/",data).then(data=>{
+    postData("/metrics/",data).then(data=>{
       let prob = data['prob']//the calculated diabetes risk probability
       writedata(data);
       //save data to localStorage
       console.log(data);
-      const color = prob<0.5 ? 'MediumSeaGreen':'coral';
-      const resultsMessage = prob<0.5 ? "Keep having a healthy lifestyle": "You should consider making a health checkup";
+      const color = prob<0.3 ? 'MediumSeaGreen':'coral';
+      const resultsMessage = prob<0.3 ? "Keep having a healthy lifestyle": "You should consider making a health checkup";
       //background color for some graphics depending on prob result
       // hide assess button
       //footer to fixed for better presentation
