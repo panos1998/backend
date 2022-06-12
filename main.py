@@ -55,11 +55,12 @@ app.add_middleware(
 async def func_metrics(request: Request,metrics:patient_metrics):
     loaded_model = pickle.load(open('model.sav', 'rb'))
     loaded_scaler = pickle.load(open('scaler.sav','rb'))
+    loaded_normalizer = pickle.load(open('normalizer.sav','rb'))
     metrics_dict = metrics.dict()
     print(metrics_dict)
     x_test = [value for value in metrics_dict.values()]
     print(x_test)
-    x_test = loaded_scaler.transform(np.array(x_test[:-2]).reshape(1,-1))
+    x_test = loaded_normalizer.transform(loaded_scaler.transform(np.array(x_test[:-2]).reshape(1,-1)))
     print(x_test)
     result = loaded_model.predict_proba(x_test)[0][1]
     print(result)
