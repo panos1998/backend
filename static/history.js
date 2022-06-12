@@ -6,8 +6,7 @@ document.getElementById('staticBackdrop').addEventListener('show.bs.modal',(even
   var details = {
     //save the useful data as key-value pairs
     "Weight": button.getAttribute('data-weight'),"BMI":button.getAttribute('data-bmi'),
-    "Waist-circ":button.getAttribute('data-waist'),"Systolic":button.getAttribute('data-systolic'),
-    "Diastolic":button.getAttribute('data-diastolic'), "Oxymetry": button.getAttribute("data-oxymetry"),
+    "Waist-circ":button.getAttribute('data-waist'), "Oxymetry": button.getAttribute("data-oxymetry"),
     "Grain": button.getAttribute("data-grain"),"Fruit": button.getAttribute('data-fruit'),
     "Vegetables":button.getAttribute('data-vegan'),"Dairy": button.getAttribute('data-dairy'),
     "Protein":button.getAttribute('data-protein'),"Total Calories":button.getAttribute("data-total_cal"),

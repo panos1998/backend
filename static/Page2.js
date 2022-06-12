@@ -1,7 +1,7 @@
 document.getElementById('assess-button').textContent='Assess';
 document.getElementById('assess-button').onclick = (event) => {
   //get the input variables of the form
-  var input = [document.getElementsByName('weight')[0].value, document.getElementsByName('systolic')[0].value, document.getElementsByName('bmi')[0].value,document.getElementsByName("diastolic")[0].value, document.getElementsByName('waist')[0].value,  document.getElementsByName('grain')[0].value,  document.getElementsByName('oximetry')[0].value, document.getElementsByName('fruits')[0].value,  document.getElementsByName('protein')[0].value,  document.getElementsByName('vegetables')[0].value,  document.getElementsByName('dairy')[0].value, document.getElementsByName('calories')[0].value];
+  var input = [document.getElementsByName('weight')[0].value, document.getElementsByName('bmi')[0].value, document.getElementsByName('waist')[0].value,  document.getElementsByName('grain')[0].value,  document.getElementsByName('oximetry')[0].value, document.getElementsByName('fruits')[0].value,  document.getElementsByName('protein')[0].value,  document.getElementsByName('vegetables')[0].value,  document.getElementsByName('dairy')[0].value, document.getElementsByName('calories')[0].value];
   let hasNegative = input.some(value=> value<0);
   //check for negative values
   let hasNull = input.some(value=> value=="");
@@ -28,20 +28,18 @@ document.getElementById('assess-button').onclick = (event) => {
     document.getElementById('modal-body').style.setProperty('background-color','Violet',"important");
     const data = {
       weight:input[0],
-      BMI:input[2],
-      waist:input[4],
-      systolic:input[1],
-      diastolic:input[3],
-      oxymetry:input[6],
-      grain:input[5],
-      fruit:input[7],
-      vegan:input[9],
-      dairy:input[10],
-      protein:input[8],
-      total_cal:input[11]
+      BMI:input[1],
+      waist:input[2],
+      oxymetry:input[4],
+      grain:input[3],
+      fruit:input[5],
+      vegan:input[7],
+      dairy:input[8],
+      protein:input[6],
+      total_cal:input[9]
     }
     //send data for machine learning through http POST request at appropriate endpoint
-    postData("https://biomedicalapp.herokuapp.com/metrics/",data).then(data=>{
+    postData("/metrics/",data).then(data=>{
       let prob = data['prob']//the calculated diabetes risk probability
       writedata(data);
       //save data to localStorage

@@ -21,8 +21,6 @@ class patient_metrics(BaseModel):
     BMI: float
     weight: float
     waist: float
-    systolic: int
-    diastolic: int
     oxymetry: int
     grain: float
     fruit: float
@@ -56,11 +54,12 @@ app.add_middleware(
 @app.post("/metrics/")
 async def func_metrics(request: Request,metrics:patient_metrics):
     loaded_model = pickle.load(open('model.sav', 'rb'))
+    loaded_scaler = pickle.load(open('scaler.sav','rb'))
     metrics_dict = metrics.dict()
     print(metrics_dict)
     x_test = [value for value in metrics_dict.values()]
     print(x_test)
-    x_test = np.array(x_test[:-2]).reshape(1,-1)
+    x_test = loaded_scaler.transform(np.array(x_test[:-2]).reshape(1,-1))
     print(x_test)
     result = loaded_model.predict_proba(x_test)[0][1]
     print(result)
