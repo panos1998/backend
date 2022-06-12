@@ -15,7 +15,7 @@ document.getElementById('staticBackdrop').addEventListener('show.bs.modal',(even
   list.style.setProperty('list-style', 'none', 'important')//remove li dots
   var display_card = document.getElementById('display-card');
   // select the display card
-  let color = details['Risk probability']<0.3?"lightgreen":"coral"
+  let color = details['Risk probability']<0.1?"lightgreen":"coral"
   display_card.style.setProperty("background-color",color,"important");
   console.log(list);
   console.log(display_card);
