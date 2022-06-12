@@ -23,7 +23,7 @@ document.getElementById('staticBackdrop').addEventListener('show.bs.modal',(even
     //for every key-value pair  inside our dictionary
     var list_item = document.createElement('li');
     // create a list element
-    list_item.appendChild(document.createTextNode(""+key+": "+value+""));
+    list_item.innerHTML="<b>"+key+"</b>: "+value+"";
     //put the useful data context inside list_item
     list.appendChild(list_item);
     // finally append  the element to the list parent
