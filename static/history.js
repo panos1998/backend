@@ -64,7 +64,7 @@ function readlocalstorage(){
       const clone = record.cloneNode(true);
       for (const [key, value] of Object.entries(element)){
         clone.setAttribute('data-'+key+'', ''+value+'');
-        if(clone.getAttribute('data-prob')<0.5){
+        if(clone.getAttribute('data-prob')<0.6){
           //some coloring depending on result
           clone.style.setProperty('background-color','lightgreen', 'important');
         }

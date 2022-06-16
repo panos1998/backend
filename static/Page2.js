@@ -44,8 +44,8 @@ document.getElementById('assess-button').onclick = (event) => {
       writedata(data);
       //save data to localStorage
       console.log(data);
-      const color = prob<0.1 ? 'MediumSeaGreen':'coral';
-      const resultsMessage = prob<0.1 ? "Keep having a healthy lifestyle": "You should consider making a health checkup";
+      const color = prob<0.6 ? 'MediumSeaGreen':'coral';
+      const resultsMessage = prob<0.6 ? "Keep having a healthy lifestyle": "You should consider making a health checkup";
       //background color for some graphics depending on prob result
       // hide assess button
       //footer to fixed for better presentation
